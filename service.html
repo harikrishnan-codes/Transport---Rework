@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport & Logistics</title>
+    <link rel="icon" href="./assets/bg remove.webp">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="./root.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="./assets/dark red.webp" alt="logo" width="150px">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Services</a>
+                <a href="price.html">Pricing</a>
+                <div class="mobile-actions">
+                    <button class="btn btn-outline track-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+                    <button class="btn btn-primary" onclick="window.location.href='sign.html'">Sign Up</button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="btn btn-outline track-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+                <button class="btn btn-primary" onclick="window.location.href='sign.html'">Sign Up</button>
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero hero" id="services-hero">
+        <div class="services-hero-bg">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                alt="Logistics Services">
+            <div class="services-hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="services-header-text">
+                <span class="badge">Comprehensive Logistics</span>
+                <h1>Our Flexible <span class="highlight">Transport Solutions</span></h1>
+                <p>From deep ocean freight to same-day air delivery, we customize our vast array of transport methods to
+                    handle your cargo exactly how you need it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview Grid -->
+    <section class="services section bg-gray" id="services-grid">
+        <div class="container">
+            <div class="section-header">
+                <h5 class="subtitle">Complete Coverage</h5>
+                <h2>What We Offer</h2>
+                <p>Every transport format unified under a single highly-optimized tracking system.</p>
+            </div>
+            <div class="service-list-container">
+                <div class="service-list-item reveal-left">
+                    <div class="service-list-icon"><i class="fas fa-plane-departure"></i></div>
+                    <div class="service-list-content">
+                        <h3>Air Freight</h3>
+                        <p>Urgent global deliveries through established top-tier carrier partnerships ensuring speed.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-list-item reveal-right" style="transition-delay: 0.1s">
+                    <div class="service-list-icon"><i class="fas fa-ship"></i></div>
+                    <div class="service-list-content">
+                        <h3>Ocean Freight</h3>
+                        <p>FCL and LCL cargo shipping scaling efficiently to move heavy volumetric industrial equipment.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-list-item reveal-left" style="transition-delay: 0.2s">
+                    <div class="service-list-icon"><i class="fas fa-truck-moving"></i></div>
+                    <div class="service-list-content">
+                        <h3>Road Transport</h3>
+                        <p>Reliable domestic box truck and large-transit deliveries traversing country borders
+                            seamlessly.</p>
+                    </div>
+                </div>
+                <div class="service-list-item reveal-right" style="transition-delay: 0.3s">
+                    <div class="service-list-icon"><i class="fas fa-warehouse"></i></div>
+                    <div class="service-list-content">
+                        <h3>Warehousing</h3>
+                        <p>Secure inventory management combined with quick pick-ups integrated into our smart
+                            facilities.</p>
+                    </div>
+                </div>
+                <div class="service-list-item reveal-left" style="transition-delay: 0.4s">
+                    <div class="service-list-icon"><i class="fas fa-file-contract"></i></div>
+                    <div class="service-list-content">
+                        <h3>Customs Clearance</h3>
+                        <p>Avoid border hassle with proactive customs brokerage handling your shipment paperwork.</p>
+                    </div>
+                </div>
+                <div class="service-list-item reveal-right" style="transition-delay: 0.5s">
+                    <div class="service-list-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="service-list-content">
+                        <h3>Supply Chain Consult</h3>
+                        <p>Let our industry veterans audit and optimize your company’s internal logistics mapping.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Service Sections -->
+    <section class="section" id="detailed-services">
+        <div class="container">
+
+            <!-- Air Freight Detail -->
+            <div class="service-detail">
+                <div class="service-text reveal-left">
+                    <div class="service-text-icon"><i class="fas fa-plane-departure"></i></div>
+                    <h2>Air Freight Services</h2>
+                    <p>When time is the most critical factor, SwiftLine’s air freight team springs into action. We have
+                        dedicated cargo jet space reserved worldwide to guarantee your shipment never sits waiting in a
+                        terminal.</p>
+                    <ul class="service-feature-list">
+                        <li><i class="fas fa-check-circle"></i> Priority Next-Flight-Out Service</li>
+                        <li><i class="fas fa-check-circle"></i> Charter Aircraft options available</li>
+                        <li><i class="fas fa-check-circle"></i> Temperature-controlled handling</li>
+                        <li><i class="fas fa-check-circle"></i> Door-to-Door, Door-to-Airport solutions</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Request Air Freight Quote</a>
+                </div>
+                <div class="service-img-wrapper reveal-right">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Air Freight Plane">
+                </div>
+            </div>
+
+            <!-- Ocean Freight Detail (Reverse) -->
+            <div class="service-detail reverse">
+                <div class="service-text reveal-right">
+                    <div class="service-text-icon"><i class="fas fa-ship"></i></div>
+                    <h2>Ocean Freight Solutions</h2>
+                    <p>Cost-effective scaling for mass product distribution. Whether you require a Full Container Load
+                        (FCL) or Less than Container Load (LCL), our dedicated marine dispatch handles complex
+                        cross-ocean movements with ease.</p>
+                    <ul class="service-feature-list">
+                        <li><i class="fas fa-check-circle"></i> Competitive market routing prices</li>
+                        <li><i class="fas fa-check-circle"></i> Seamless Port-to-Port transits</li>
+                        <li><i class="fas fa-check-circle"></i> Full documentation management</li>
+                        <li><i class="fas fa-check-circle"></i> Heavy & Oversized cargo specialty</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Explore Ocean Freight</a>
+                </div>
+                <div class="service-img-wrapper reveal-left">
+                    <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Ocean Cargo Ship">
+                </div>
+            </div>
+
+            <!-- Warehousing Detail -->
+            <div class="service-detail">
+                <div class="service-text reveal-left">
+                    <div class="service-text-icon"><i class="fas fa-boxes"></i></div>
+                    <h2>Smart Warehousing</h2>
+                    <p>Reduce holding costs with access to our automated warehouse grid. Drop your products into our
+                        nodes, and we automatically fulfill your client orders via API directly out of our advanced
+                        storage centers.</p>
+                    <ul class="service-feature-list">
+                        <li><i class="fas fa-check-circle"></i> 24/7 Security & Active monitoring</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time inventory cloud dashboard</li>
+                        <li><i class="fas fa-check-circle"></i> Automated pick, pack, and label systems</li>
+                        <li><i class="fas fa-check-circle"></i> Short & Long-term storage options</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">View Storage Facilities</a>
+                </div>
+                <div class="service-img-wrapper reveal-right">
+                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Automated Warehouse">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Specialized Cargo Section -->
+    <section class="section" id="specialized-cargo" style="background-color: var(--text-dark); color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h5 class="subtitle" style="color: var(--primary-color);">Niche Expertise</h5>
+                <h2 style="color: white;">Specialized Cargo Handling</h2>
+                <p style="color: rgba(255,255,255,0.7);">Equipped with specialized carriers, we handle unique,
+                    sensitive, and hazardous materials securely.</p>
+            </div>
+            <div class="specialized-bento">
+                <div class="bento-card reveal-up">
+                    <div class="bento-icon-wrapper"><i class="fas fa-snowflake"></i></div>
+                    <h3>Cold Chain</h3>
+                    <p>Temperature-controlled transit ensuring perishables and pharmaceuticals remain perfectly
+                        preserved from end to end.</p>
+                </div>
+                <div class="bento-card reveal-up" style="transition-delay: 0.1s">
+                    <div class="bento-icon-wrapper"><i class="fas fa-biohazard"></i></div>
+                    <h3>Hazmat & Chemicals</h3>
+                    <p>Fully compliant, specialized vehicles and certified personnel extensively trained for strictly
+                        regulated compound transit.</p>
+                </div>
+                <div class="bento-card reveal-up" style="transition-delay: 0.2s">
+                    <div class="bento-icon-wrapper"><i class="fas fa-gem"></i></div>
+                    <h3>High-Value Security</h3>
+                    <p>Armored vehicle fleet integrated with continuous AI GPS telemetry and dedicated physical security
+                        personnel for supreme asset protection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="section" id="industries">
+        <div class="container">
+            <div class="section-header">
+                <h5 class="subtitle">Global Partners</h5>
+                <h2>Industries We Serve</h2>
+                <p>Our logistical infrastructure is tailored to meet the strict demands of specific global market
+                    sectors.</p>
+            </div>
+            <div class="image-panel-grid">
+                <div class="image-panel reveal-up">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Healthcare Logistics" class="panel-bg">
+                    <div class="image-panel-overlay">
+                        <div class="image-panel-content">
+                            <i class="fas fa-stethoscope"></i>
+                            <h3>Healthcare & Pharma</h3>
+                            <p>Secured cold-chain transport for vaccines directly to medical facilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-panel reveal-up" style="transition-delay: 0.1s">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Automotive Parts" class="panel-bg">
+                    <div class="image-panel-overlay">
+                        <div class="image-panel-content">
+                            <i class="fas fa-car"></i>
+                            <h3>Automotive</h3>
+                            <p>Just-in-time delivery of essential car parts to assembly lines worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-panel reveal-up" style="transition-delay: 0.2s">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Tech Components" class="panel-bg">
+                    <div class="image-panel-overlay">
+                        <div class="image-panel-content">
+                            <i class="fas fa-microchip"></i>
+                            <h3>Tech & Electronics</h3>
+                            <p>Anti-static packing and high-security escorts for valuable tech components.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-panel reveal-up" style="transition-delay: 0.3s">
+                    <img src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="E-Commerce Warehouse" class="panel-bg">
+                    <div class="image-panel-overlay">
+                        <div class="image-panel-content">
+                            <i class="fas fa-shopping-bag"></i>
+                            <h3>E-Commerce Retail</h3>
+                            <p>Integrated API fulfillment sending inventory right to the customer's door.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services FAQ -->
+    <section class="faq section bg-gray" id="services-faq">
+        <div class="container">
+            <div class="section-header">
+                <h5 class="subtitle">Got Questions?</h5>
+                <h2>Services FAQ</h2>
+                <p>Common questions concerning our specific transit operations.</p>
+            </div>
+            <div class="faq-accordion reveal-up">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is heavy machinery transport included in Ocean Freight?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we specialize in high-load heavy machinery handling, particularly in our Ocean and
+                            specialized Road transit tiers. Custom cranes and out-of-gauge load logistics are available.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens if a package is delayed in customs?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our dedicated customs brokerage operates strictly to proactively clear goods before they
+                            land. In the rare event of a flag, our agents work 24/7 on-site to release the shipment
+                            immediately.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can you warehouse my products temporarily before delivery?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We operate a massive smart-storage network. We can hold bulk cargo indefinitely,
+                            and dispatch it in smaller packages as your e-commerce demands rise.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Does SwiftLine provide comprehensive cargo insurance?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All basic routes come with standard carrier liability. Additionally, we offer optional
+                            zero-deductible Premium Freight Insurance covering 100% of declared value across all
+                            transport modes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us CTA -->
+    <section class="about section" id="cta">
+        <div class="container">
+            <div class="cta-banner reveal-up">
+                <div class="cta-banner-content">
+                    <h2>Unsure which service fits best?</h2>
+                    <p>Talk to our transport advisors today. We'll map out a personalized logistical pipeline for your
+                        products perfectly matched to your budget.</p>
+                </div>
+                <div class="cta-banner-actions">
+                    <button class="btn btn-white btn-large">Talk to Sales</button>
+                    <button class="btn btn-outline-white btn-large">View Our Network</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fas fa-truck-fast"></i> SwiftLine
+                </a>
+                <p>Bringing you the world. Delivering promises safely, securely, and swiftly across global borders.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">News & Media</a>
+                <a href="#">Sustainability</a>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="services.html">Air Freight</a>
+                <a href="services.html">Ocean Freight</a>
+                <a href="services.html">Road Transport</a>
+                <a href="services.html">Supply Chain</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">Track Shipment</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Locations</a>
+            </div>
+        </div>
+        <div class="container text-center footer-bottom">
+            <p>&copy; 2026 SwiftLine Logistics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

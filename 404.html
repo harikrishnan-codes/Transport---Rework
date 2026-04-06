@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport & Logistics</title>
+    <link rel="icon" href="./assets/bg remove.webp">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./root.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        .error-hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: #111;
+            color: white;
+            overflow: hidden;
+        }
+
+        .error-hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at center, rgba(255,19,29,0.15) 0%, transparent 60%);
+            z-index: 1;
+        }
+        
+        .error-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .error-code {
+            font-size: 10rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary-color), #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 30px rgba(255,19,29,0.2);
+            animation: pulseError 3s ease infinite;
+        }
+
+        @keyframes pulseError {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .error-hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .error-hero p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+        }
+
+        .btn-home {
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (Simplified) -->
+    <!-- <nav class="navbar" id="navbar" style="background: rgba(17, 17, 17, 0.95);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-truck-fast"></i> SwiftLine
+            </a>
+            <div class="nav-right">
+                <a href="index.html" class="btn btn-outline track-btn" style="color:white; border-color:white;">Return Home</a>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- Error Section -->
+    <section class="error-hero">
+        <div class="container error-content">
+            <div class="error-code">404</div>
+            <h2>Freight Not Found</h2>
+            <p>The shipment page you are looking for has been universally misrouted or completely lost in transit. Let's get you back on the right path.</p>
+            <a href="index.html" class="btn btn-primary btn-home"><i class="fas fa-tachometer-alt"></i> Return to Homepage</a>
+        </div>
+    </section>
+
+</body>
+</html>

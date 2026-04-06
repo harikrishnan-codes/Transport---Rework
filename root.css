@@ -120,7 +120,7 @@ p {
 
 .btn-outline {
     border-color: var(--border-color);
-    color: var(--text-dark);
+    color: var(--bg-surface);
     background: transparent;
 }
 
@@ -151,4 +151,180 @@ p {
 .btn-large {
     padding: 16px 32px;
     font-size: 1.125rem;
+}
+
+
+
+
+
+
+
+
+
+/* header */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 24px 0;
+    transition: var(--transition);
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+    padding: 16px 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-dark);
+}
+
+.logo i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.navbar.scrolled .logo,
+.navbar.scrolled .nav-links a {
+    color: var(--text-dark);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 1.05rem;
+    position: relative;
+    color: white;
+}
+
+.navbar.scrolled .nav-links a {
+    color: var(--text-dark);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+.navbar.scrolled .mobile-menu-btn {
+    color: var(--text-dark);
+}
+
+.track-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color:var(--bg-surface);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar.scrolled .track-btn {
+    background: transparent;
+    color: var(--text-dark);
+    border-color: var(--border-color);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .nav-right .track-btn,
+    .nav-right .btn-primary {
+        display: none;
+    }
+
+    .mobile-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    .mobile-actions .btn {
+        width: 100%;
+    }
+
+    .mobile-actions .btn-outline {
+        border-color: var(--text-dark);
+        color: var(--text-dark);
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 350px;
+        height: 100vh;
+        background-color: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        color: var(--text-dark) !important;
+        font-size: 1.5rem;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        z-index: 1001;
+        position: relative;
+    }
 }

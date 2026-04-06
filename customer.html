@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport & Logistics</title>
+    <link rel="icon" href="./assets/bg remove.webp">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="customer.css">
+    <!-- <link rel="stylesheet" href="./root.css"> -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="brand"><i class="fas fa-truck-fast"></i> Transport Client</a>
+            <button class="close-sidebar" onclick="document.querySelector('.sidebar').classList.remove('active')"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active"><i class="fas fa-home"></i> Dashboard Summary</a>
+            <a href="#" class="nav-item"><i class="fas fa-box-open"></i> Booking & Quotes</a>
+            <a href="#" class="nav-item"><i class="fas fa-history"></i> Package History</a>
+            <a href="#" class="nav-item"><i class="fas fa-file-invoice"></i> Invoices & Billing</a>
+            <a href="#" class="nav-item"><i class="fas fa-cog"></i> Account Settings</a>
+        </nav>
+
+        <div class="user-panel">
+            <div class="user-avatar" id="avatarInitial">U</div>
+            <div class="user-info">
+                <p id="customerNameDisplay">Client User</p>
+                <span>Logistics Partner</span>
+                <span id="customerEmailDisplay" style="display:block; text-transform:none; font-size:0.8rem; margin-top:2px;"></span>
+            </div>
+            <button class="logout-btn" title="Log Out" onclick="logout()"><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+    </aside>
+
+    <main class="main-canvas">
+        <div class="top-bar">
+            <button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')"><i class="fas fa-bars"></i></button>
+            <h1 class="page-title">Customer Dashboard</h1>
+            <div class="quick-actions">
+                <button class="btn"><i class="fas fa-paper-plane"></i> Book New Shipment</button>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            
+            <div class="left-column">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3>Your Recent Bookings</h3>
+                        <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">View All Docs &rarr;</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tracking ID</th>
+                                    <th>Destination</th>
+                                    <th>Carrier</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#SW-9982</td>
+                                    <td>Chicago, IL</td>
+                                    <td><i class="fas fa-plane"></i> SwiftAir</td>
+                                    <td>Oct 24</td>
+                                    <td><span class="status-badge status-transit">In Transit</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#SW-8120</td>
+                                    <td>London, UK</td>
+                                    <td><i class="fas fa-ship"></i> Ocean Freight</td>
+                                    <td>Oct 15</td>
+                                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#SW-8044</td>
+                                    <td>Toronto, CA</td>
+                                    <td><i class="fas fa-truck"></i> Ground Express</td>
+                                    <td>Oct 10</td>
+                                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="panel track-widget">
+                    <h3>Track a Package</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem;">Enter your tracking code below to instantly locate your cargo.</p>
+                    <input type="text" placeholder="e.g. SWF-89241-XB">
+                    <button type="button">Track Package</button>
+                </div>
+
+                <div class="panel">
+                    <h3 style="margin-bottom: 20px;">Dedicated Logistics Agent</h3>
+                    <div class="agent-card">
+                        <div class="agent-avatar"><i class="fas fa-user-tie"></i></div>
+                        <div>
+                            <p style="font-weight: 700; color: var(--text-dark);">Sarah Jenkins</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">sarah.j@swiftline.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Safely display logged-in user data without strict routing constraints
+        try {
+            const sessionData = localStorage.getItem('swiftline_session');
+            if (sessionData) {
+                const session = JSON.parse(sessionData);
+                if (session.name) {
+                    document.getElementById('customerNameDisplay').textContent = session.name;
+                    document.getElementById('avatarInitial').textContent = session.name.charAt(0).toUpperCase();
+                }
+                if (session.email) {
+                    document.getElementById('customerEmailDisplay').textContent = session.email;
+                }
+            }
+        } catch(e) {}
+
+        function logout() {
+            localStorage.removeItem('swiftline_session');
+            window.location.href = 'auth.html';
+        }
+    </script>
+</body>
+</html>

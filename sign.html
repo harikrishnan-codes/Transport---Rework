@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport & Logistics</title>
+    <link rel="icon" href="./assets/bg remove.webp">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sign.css">
+    <link rel="stylesheet" href="./root.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="animated-bg">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-header">
+            <a href="index.html" class="auth-logo"><i class="fas fa-truck-fast"></i> SwiftLine</a>
+            <p>Access your global logistics dashboard</p>
+        </div>
+
+        <div class="auth-body">
+
+            <!-- SIGNUP FORM (Default View) -->
+            <div id="signupFormItem" class="auth-form active">
+                <h2>Create Account</h2>
+                <div id="signupStatus" class="status-msg"></div>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" id="signupName" class="form-input" required
+                            oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" id="signupEmail" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Account Type:</label>
+                        <select id="signupRole" class="form-select" required>
+                            <option value="">Select User Type</option>
+                            <option value="admin">Administrator</option>
+                            <option value="customer">Customer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="signupPassword" class="form-input" required>
+                            <i class="fas fa-eye password-toggle" onclick="togglePassword(this, 'signupPassword')"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Confirm Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="signupConfirmPassword" class="form-input" required>
+                            <i class="fas fa-eye password-toggle"
+                                onclick="togglePassword(this, 'signupConfirmPassword')"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-auth">Register <i class="fas fa-user-plus"></i></button>
+                    <div class="auth-links">
+                        <p>Already have an account? <a onclick="switchForm('loginFormItem')">Log in</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <div id="loginFormItem" class="auth-form">
+                <h2>Welcome Back</h2>
+                <div id="loginStatus" class="status-msg"></div>
+                <!-- Very simple login form. We select the role directly here to explicitly choose where to route. -->
+                <form id="loginForm">
+
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" id="loginEmail" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="loginPassword" class="form-input" required>
+                            <i class="fas fa-eye password-toggle" onclick="togglePassword(this, 'loginPassword')"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-auth">Log In <i class="fas fa-sign-in-alt"></i></button>
+                    <div class="auth-links">
+                        <p>Don't have an account? <a onclick="switchForm('signupFormItem')">Sign up</a></p>
+                        <p><a onclick="switchForm('forgotFormItem')">Forgot your password?</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- FORGOT PASSWORD FORM -->
+            <div id="forgotFormItem" class="auth-form">
+                <h2>Reset Password</h2>
+                <p style="text-align: center; color: var(--text-light); margin-bottom: 24px;">Enter your email and we'll
+                    send you recovery instructions.</p>
+                <form action="404.html" method="GET" id="forgotForm">
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" id="resetEmail" class="form-input" required>
+                    </div>
+                    <button type="submit" class="btn-auth">Reset Password</button>
+                    <div class="auth-links">
+                        <p>Remembered your password? <a onclick="switchForm('loginFormItem')">Back to Log in</a></p>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Extremely simple UI Toggle Logic (No Complex RBAC/LocalStorage)
+
+        function switchForm(formId) {
+            document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
+            document.getElementById(formId).classList.add('active');
+
+            // Clear status messages and inputs
+            document.querySelectorAll('.status-msg').forEach(msg => {
+                msg.className = 'status-msg';
+                msg.textContent = '';
+            });
+            document.querySelectorAll('form').forEach(f => f.reset());
+        }
+
+        // Password Toggle logic
+        function togglePassword(icon, inputId) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+                icon.style.color = 'var(--primary-color)';
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+                icon.style.color = 'var(--text-light)';
+            }
+        }
+
+        const USERS_KEY = 'swiftline_users';
+
+        // Handle Signup
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('signupName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('signupConfirmPassword').value;
+            const role = document.getElementById('signupRole').value;
+            const statusBox = document.getElementById('signupStatus');
+
+            // Simple Password Match Check
+            if (password !== confirmPassword) {
+                statusBox.textContent = "Error: Passwords do not match.";
+                statusBox.className = "status-msg error";
+                return;
+            }
+
+            // Save to mock database
+            let users = [];
+            try {
+                users = JSON.parse(localStorage.getItem(USERS_KEY));
+                if (!Array.isArray(users)) users = [];
+            } catch (e) {
+                users = [];
+            }
+            
+            // Overwrite existing test email so checking role functions perfectly
+            const existingUserIndex = users.findIndex(u => u.email === email);
+            if (existingUserIndex >= 0) {
+                users[existingUserIndex] = { name, email, password, role };
+            } else {
+                users.push({ name, email, password, role });
+            }
+            
+            localStorage.setItem(USERS_KEY, JSON.stringify(users));
+
+            statusBox.textContent = "Registration successful! Routing to login...";
+            statusBox.className = "status-msg success";
+
+            setTimeout(() => {
+                switchForm('loginFormItem');
+                const loginStatusBox = document.getElementById('loginStatus');
+                loginStatusBox.textContent = "Please log in using your new credentials.";
+                loginStatusBox.className = "status-msg success";
+            }, 800);
+        });
+
+        // Handle Login - Database Validation Routing
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const statusBox = document.getElementById('loginStatus');
+
+            let users = [];
+            try {
+                users = JSON.parse(localStorage.getItem(USERS_KEY)) || [];
+            } catch (e) { }
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                statusBox.textContent = "Authentication successful! Redirecting...";
+                statusBox.className = "status-msg success";
+
+                // Store simple session data in case dashboards ever want to display the user's name
+                localStorage.setItem('swiftline_session', JSON.stringify({ name: user.name, role: user.role, email: user.email }));
+
+                setTimeout(() => {
+                    if (user.role === 'admin') {
+                        window.location.href = 'admin.html';
+                    } else {
+                        window.location.href = 'customer.html';
+                    }
+                }, 800);
+            } else {
+                statusBox.textContent = "Invalid email or password.";
+                statusBox.className = "status-msg error";
+            }
+        });
+    </script>
+</body>
+
+</html>

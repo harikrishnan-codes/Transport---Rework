@@ -100,4 +100,50 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+
+     // Number Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; 
+    let counted = false;
+
+    const runCounters = () => {
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText.replace(/,/g, '');
+
+                const inc = target / speed;
+
+                if (count < target) {
+                    let newValue = Math.ceil(count + inc);
+                    if(target >= 1000) {
+                        counter.innerText = newValue.toLocaleString('en-US');
+                    } else {
+                        counter.innerText = newValue;
+                    }
+                    setTimeout(updateCount, 15);
+                } else {
+                    if(target >= 1000) {
+                        counter.innerText = target.toLocaleString('en-US');
+                    } else {
+                        counter.innerText = target;
+                    }
+                }
+            };
+            updateCount();
+        });
+    };
+
+    const counterSection = document.getElementById('impact');
+    if (counterSection && counters.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !counted) {
+                counted = true;
+                runCounters();
+            }
+        }, { threshold: 0.3 }); 
+        
+        observer.observe(counterSection);
+    }
 });

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport & Logistics</title>
+    <link rel="icon" href="./assets/bg remove.webp">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="price.css">
+    <link rel="stylesheet" href="./root.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="./assets/dark red.webp" alt="logo" width="150px">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Services</a>
+                <a href="price.html">Pricing</a>
+                <div class="mobile-actions">
+                    <button class="btn btn-outline track-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+                    <button class="btn btn-primary" onclick="window.location.href='sign.html'">Sign Up</button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="btn btn-outline track-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+                <button class="btn btn-primary" onclick="window.location.href='sign.html'">Sign Up</button>
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero Section -->
+    <section class="pricing-hero" id="pricing-hero">
+        <div class="container">
+            <div class="pricing-hero-text">
+                <span class="badge">Clear Rates</span>
+                <h1>Transparent Pricing,<br> <span class="highlight">Zero Hidden Fees</span></h1>
+                <p>Select the shipping velocity that properly balances your budget against your cargo's urgency. Scalable packages designed for modern business.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Packages -->
+    <section class="section bg-gray" id="pricing-cards">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Standard -->
+                <div class="pricing-card reveal-up">
+                    <div class="pricing-header">
+                        <h3>Standard Freight</h3>
+                        <p>Cost-effective regular transit for flexible timelines</p>
+                    </div>
+                    <div class="pricing-price">$45<span>/ pallet</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Standard 5-7 Day Delivery</li>
+                        <li><i class="fas fa-check"></i> Basic GPS Tracking Portal</li>
+                        <li><i class="fas fa-check"></i> Automated Email Updates</li>
+                        <li><i class="fas fa-check"></i> Standard Port Handling</li>
+                        <li><i class="fas fa-times"></i> Priority Terminal Loading</li>
+                        <li><i class="fas fa-times"></i> Dedicated Account Manager</li>
+                    </ul>
+                    <button class="btn btn-outline" style="width: 100%;">Select Standard</button>
+                </div>
+                
+                <!-- Priority (Popular) -->
+                <div class="pricing-card popular reveal-up" style="transition-delay: 0.1s">
+                    <div class="popular-badge">POPULAR</div>
+                    <div class="pricing-header">
+                        <h3>Priority Express</h3>
+                        <p>Perfectly balanced speed and guaranteed reliability</p>
+                    </div>
+                    <div class="pricing-price">$89<span>/ pallet</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Express 2-3 Day Delivery</li>
+                        <li><i class="fas fa-check"></i> Real-time LIVE Telemetry</li>
+                        <li><i class="fas fa-check"></i> SMS & Push Notification Updates</li>
+                        <li><i class="fas fa-check"></i> Priority Terminal Loading & Unloading</li>
+                        <li><i class="fas fa-check"></i> 100% Guaranteed Delivery Window</li>
+                        <li><i class="fas fa-times"></i> Dedicated Account Manager</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;">Select Priority</button>
+                </div>
+                
+                <!-- Enterprise -->
+                <div class="pricing-card reveal-up" style="transition-delay: 0.2s">
+                    <div class="pricing-header">
+                        <h3>Enterprise Air</h3>
+                        <p>Maximum speed global velocity for critical products</p>
+                    </div>
+                    <div class="pricing-price">$195<span>/ pallet</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Same & Next Day Global Delivery</li>
+                        <li><i class="fas fa-check"></i> Real-time LIVE Telemetry & Video</li>
+                        <li><i class="fas fa-check"></i> Immediate Customs Bypass Queue</li>
+                        <li><i class="fas fa-check"></i> Complete Premium Insurance included</li>
+                        <li><i class="fas fa-check"></i> Dedicated 24/7 Account Manager</li>
+                        <li><i class="fas fa-check"></i> Unlimited API Integration Support</li>
+                    </ul>
+                    <button class="btn btn-outline" style="width: 100%;">Select Enterprise</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Distance Zone Base Multipliers -->
+    <section class="section" id="zone-pricing">
+        <div class="container">
+            <div class="section-header">
+                <h5 class="subtitle">Distance Calculation</h5>
+                <h2>Regional Zone Multipliers</h2>
+                <p>Calculate your final shipment fee based on the destination's distance from the domestic harbor.</p>
+            </div>
+            <div class="zone-map reveal-up">
+                <div class="zone-step">
+                    <div class="zone-icon-wrapper"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Zone A</h3>
+                    <span class="zone-range">0 - 500 Miles</span>
+                    <div class="zone-multiplier">1.0x Base</div>
+                    <div class="zone-time"><i class="far fa-clock"></i> 1-2 Days</div>
+                </div>
+                <div class="zone-step" style="transition-delay: 0.1s">
+                    <div class="zone-icon-wrapper"><i class="fas fa-route"></i></div>
+                    <h3>Zone B</h3>
+                    <span class="zone-range">501 - 2,500 Miles</span>
+                    <div class="zone-multiplier">1.5x Base</div>
+                    <div class="zone-time"><i class="far fa-clock"></i> 3-5 Days</div>
+                </div>
+                <div class="zone-step" style="transition-delay: 0.2s">
+                    <div class="zone-icon-wrapper"><i class="fas fa-globe-americas"></i></div>
+                    <h3>Zone C</h3>
+                    <span class="zone-range">2,501 - 5,000 Miles</span>
+                    <div class="zone-multiplier">2.2x Base</div>
+                    <div class="zone-time"><i class="far fa-clock"></i> 5-7 Days</div>
+                </div>
+                <div class="zone-step" style="transition-delay: 0.3s">
+                    <div class="zone-icon-wrapper"><i class="fas fa-plane"></i></div>
+                    <h3>Zone D</h3>
+                    <span class="zone-range">5,001+ Miles</span>
+                    <div class="zone-multiplier">Custom Quote</div>
+                    <div class="zone-time"><i class="far fa-clock"></i> Varies</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Fleet Base Rates -->
+    <section class="section" id="vehicle-rates" style="background-color: var(--text-dark); color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h5 class="subtitle" style="color: var(--primary-color);">Dedicated Transport</h5>
+                <h2 style="color: white;">Start Rates by Vehicle Class</h2>
+                <p style="color: rgba(255,255,255,0.7);">Prefer to rent the entire vehicle for a dedicated route? Review our minimum carrier dispatch rates.</p>
+            </div>
+            <div class="vehicle-rates-container">
+                <div class="vehicle-rate-card reveal-up">
+                    <div class="vehicle-info">
+                        <div class="vehicle-icon"><i class="fas fa-truck-pickup"></i></div>
+                        <div>
+                            <h3>Cargo Van</h3>
+                            <p>Perfect for local B2C last-mile delivery.</p>
+                        </div>
+                    </div>
+                    <div class="vehicle-price">
+                        <h4>$220</h4>
+                        <span>/ day minimum</span>
+                    </div>
+                </div>
+                <div class="vehicle-rate-card reveal-up" style="transition-delay: 0.1s">
+                    <div class="vehicle-info">
+                        <div class="vehicle-icon"><i class="fas fa-truck"></i></div>
+                        <div>
+                            <h3>Standard Box Truck</h3>
+                            <p>Medium commercial deliveries up to 10k lbs.</p>
+                        </div>
+                    </div>
+                    <div class="vehicle-price">
+                        <h4>$480</h4>
+                        <span>/ day minimum</span>
+                    </div>
+                </div>
+                <div class="vehicle-rate-card reveal-up" style="transition-delay: 0.2s">
+                    <div class="vehicle-info">
+                        <div class="vehicle-icon"><i class="fas fa-truck-moving"></i></div>
+                        <div>
+                            <h3>Semi-Trailer</h3>
+                            <p>Heavy cross-country hauling up to 45k lbs.</p>
+                        </div>
+                    </div>
+                    <div class="vehicle-price">
+                        <h4>$1,250</h4>
+                        <span>/ route minimum</span>
+                    </div>
+                </div>
+                <div class="vehicle-rate-card reveal-up" style="transition-delay: 0.3s">
+                    <div class="vehicle-info">
+                        <div class="vehicle-icon"><i class="fas fa-ship"></i></div>
+                        <div>
+                            <h3>20ft Ocean Container</h3>
+                            <p>International sealed marine freight transit.</p>
+                        </div>
+                    </div>
+                    <div class="vehicle-price">
+                        <h4>$2,900</h4>
+                        <span>/ port-to-port</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Add-ons -->
+    <section class="section" id="addons">
+        <div class="container">
+            <div class="section-header">
+                <h5 class="subtitle">Customize Your Route</h5>
+                <h2>Available Service Add-Ons</h2>
+                <p>Enhance your base package with specialized logistical adjustments needed for your specific cargo.</p>
+            </div>
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="service-card reveal-up">
+                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Premium Insurance</h3>
+                    <p>Add zero-deductible full-value protection for high-risk cargo at just 2% of declared value.</p>
+                </div>
+                <div class="service-card reveal-up" style="transition-delay: 0.1s">
+                    <div class="service-icon"><i class="fas fa-thermometer-half"></i></div>
+                    <h3>Climate Control</h3>
+                    <p>Active thermal regulation for $+25 per pallet. Ideal for medical or perishable goods.</p>
+                </div>
+                <div class="service-card reveal-up" style="transition-delay: 0.2s">
+                    <div class="service-icon"><i class="fas fa-boxes"></i></div>
+                    <h3>Smart Storage</h3>
+                    <p>Hold your shipment securely in our api-enabled holding facility for only $10/day per unit.</p>
+                </div>
+                <div class="service-card reveal-up" style="transition-delay: 0.3s">
+                    <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+                    <h3>Customs Broker</h3>
+                    <p>Have our agents manage complicated border paperwork securely for a flat $150 filing fee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fas fa-truck-fast"></i> SwiftLine
+                </a>
+                <p>Bringing you the world. Delivering promises safely, securely, and swiftly across global borders.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">News & Media</a>
+                <a href="#">Sustainability</a>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="services.html">Air Freight</a>
+                <a href="services.html">Ocean Freight</a>
+                <a href="services.html">Road Transport</a>
+                <a href="pricing.html" style="color: var(--primary-color);">Pricing Structure</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">Track Shipment</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Locations</a>
+            </div>
+        </div>
+        <div class="container text-center footer-bottom">
+            <p>&copy; 2026 SwiftLine Logistics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

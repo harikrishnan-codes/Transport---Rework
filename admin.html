@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport & Logistics</title>
+    <link rel="icon" href="./assets/bg remove.webp">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="./root.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="brand"><i class="fas fa-truck-fast"></i> Transport Admin</a>
+            <button class="close-sidebar" onclick="document.querySelector('.sidebar').classList.remove('active')"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active"><i class="fas fa-chart-pie"></i> Executive Overview</a>
+            <a href="#" class="nav-item"><i class="fas fa-route"></i> Global Fleet Tracking</a>
+            <a href="#" class="nav-item"><i class="fas fa-users-cog"></i> Dispatch Management</a>
+            <a href="#" class="nav-item"><i class="fas fa-shield-alt"></i> Security Logs</a>
+        </nav>
+
+        <div class="user-panel">
+            <div class="user-avatar" id="avatarInitial">A</div>
+            <div class="user-info">
+                <p id="adminNameDisplay">System Admin</p>
+                <span>Command Level</span>
+                <span id="adminEmailDisplay" style="display:block; text-transform:none; letter-spacing:normal; color: var(--text-muted); margin-top:2px; font-size: 0.8rem;"></span>
+            </div>
+            <button class="logout-btn" title="Log Out" onclick="logout()"><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+    </aside>
+
+    <main class="main-canvas">
+        <div class="top-bar">
+            <button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')"><i class="fas fa-bars"></i></button>
+            <h1 class="page-title">Admin Dashboard</h1>
+            <div class="quick-actions">
+                <button class="btn"><i class="fas fa-plus"></i> Dispatch New Fleet</button>
+            </div>
+        </div>
+
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-truck-moving"></i></div>
+                <div class="stat-value">1,248</div>
+                <div class="stat-label">Active Transits</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-anchor"></i></div>
+                <div class="stat-value">34</div>
+                <div class="stat-label">Vessels at Sea</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="stat-value">3</div>
+                <div class="stat-label">Customs Holds</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-plane-up"></i></div>
+                <div class="stat-value">89</div>
+                <div class="stat-label">Air Freights Incoming</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <h3>Global Transport Watchlist</h3>
+                <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">View All Activity &rarr;</a>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Shipment ID</th>
+                            <th>Vehicle/Vessel</th>
+                            <th>Current Route</th>
+                            <th>Destination</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#SWF-89241-XB</td>
+                            <td>Cargo Ship (Titan)</td>
+                            <td>Mid-Atlantic Ocean</td>
+                            <td>New York Port</td>
+                            <td><span class="status-badge status-transit">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td>#SWF-21940-AA</td>
+                            <td>Boeing 747 Freighter</td>
+                            <td>Europe Airspace</td>
+                            <td>London Heathrow</td>
+                            <td><span class="status-badge status-delivered">Cleared Customs</span></td>
+                        </tr>
+                        <tr>
+                            <td>#SWF-00192-RZ</td>
+                            <td>Heavy Haul Truck #42</td>
+                            <td>Interstate 10 East</td>
+                            <td>Chicago Central</td>
+                            <td><span class="status-badge status-pending">Loading Dock 4</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Safely display logged-in user data without strict routing constraints
+        try {
+            const sessionData = localStorage.getItem('swiftline_session');
+            if (sessionData) {
+                const session = JSON.parse(sessionData);
+                if (session.name) {
+                    document.getElementById('adminNameDisplay').textContent = session.name;
+                    document.getElementById('avatarInitial').textContent = session.name.charAt(0).toUpperCase();
+                }
+                if (session.email) {
+                    document.getElementById('adminEmailDisplay').textContent = session.email;
+                }
+            }
+        } catch(e) {}
+
+        function logout() {
+            localStorage.removeItem('swiftline_session');
+            window.location.href = 'auth.html';
+        }
+    </script>
+</body>
+</html>

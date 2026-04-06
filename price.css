@@ -1,0 +1,314 @@
+    .pricing-hero {
+    min-height: 40vh;
+    padding-top: 150px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--text-dark);
+    text-align: center;
+}
+
+.pricing-hero-text {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.pricing-hero-text h1 {
+    color: white;
+    margin-bottom: 24px;
+}
+
+.pricing-hero-text p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+}
+
+/* Pricing Cards */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+.pricing-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 48px 40px;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+.pricing-card.popular {
+    background: var(--bg-gray);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: var(--shadow-md);
+}
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+.popular-badge {
+    position: absolute;
+    top: 25px;
+    right: -35px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px 40px;
+    transform: rotate(45deg);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.pricing-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+.pricing-price {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.pricing-price span {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-left: 6px;
+}
+.pricing-features {
+    list-style: none;
+    margin-bottom: 40px;
+    text-align: left;
+    flex-grow: 1;
+}
+.pricing-features li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.05rem;
+}
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+.pricing-features i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+.pricing-features i.fa-times {
+    color: #d1d5db;
+}
+@media (max-width: 900px) {
+    .pricing-card.popular {
+        transform: scale(1);
+    }
+    .pricing-card.popular:hover {
+        transform: translateY(-10px);
+    }
+}
+
+/* Zone Map (Premium Alternative to Table) */
+.zone-map {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    position: relative;
+}
+.zone-step {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    position: relative;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    z-index: 2;
+    overflow: hidden;
+}
+.zone-step::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 4px;
+    background: var(--border-color);
+    transition: var(--transition);
+}
+.zone-step:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+.zone-step:hover::before {
+    background: var(--primary-color);
+}
+.zone-icon-wrapper {
+    width: 60px; height: 60px;
+    background: rgba(255,19,29,0.05);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+.zone-step:hover .zone-icon-wrapper {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1) rotate(5deg);
+}
+.zone-step h3 {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+}
+.zone-step .zone-range {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    display: block;
+}
+.zone-multiplier {
+    display: inline-block;
+    background: var(--bg-gray);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    transition: var(--transition);
+}
+.zone-step:hover .zone-multiplier {
+    background: var(--primary-color);
+    color: white;
+}
+.zone-time {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Vehicle Premium Rate Cards */
+.vehicle-rates-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+}
+.vehicle-rate-card {
+    background: #111;
+    border-radius: 20px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.vehicle-rate-card::after {
+    content: '';
+    position: absolute;
+    background: radial-gradient(circle at right top, rgba(255,19,29,0.4) 0%, transparent 60%);
+    width: 150px; height: 150px;
+    right: -50px; top: -50px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1;
+    pointer-events: none;
+}
+.vehicle-rate-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(255,19,29,0.5);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2), 0 0 20px rgba(255,19,29,0.2);
+}
+.vehicle-rate-card:hover::after {
+    transform: scale(1.5);
+    opacity: 1;
+}
+.vehicle-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+}
+.vehicle-icon {
+    font-size: 2rem;
+    color: white;
+    width: 60px;
+    height: 60px;
+    background: rgba(255,19,29,0.2);
+    border: 1px solid rgba(255,19,29,0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+.vehicle-rate-card:hover .vehicle-icon {
+    background: var(--primary-color);
+    transform: rotate(10deg);
+}
+.vehicle-info h3 {
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+    color: white;
+}
+.vehicle-info p {
+    margin: 0;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.95rem;
+}
+.vehicle-price {
+    text-align: right;
+    z-index: 2;
+}
+.vehicle-price h4 {
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 2px;
+}
+.vehicle-price span {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    .vehicle-rate-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .vehicle-price {
+        text-align: left;
+        width: 100%;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+}
