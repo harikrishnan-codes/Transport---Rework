@@ -328,3 +328,90 @@ p {
         position: relative;
     }
 }
+
+
+
+
+
+
+
+
+/* --- Section Header Styling --- */
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+/* The small "How It Works" text */
+.section-header .subtitle {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em; /* Premium spaced-out look */
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Subtle accent line under the subtitle */
+.section-header .subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Main Heading (Seamless Shipping Process) */
+.section-header h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem); /* Responsive sizing */
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+/* Description Text */
+.section-header p {
+    color: var(--text-light);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 550px;
+}
+
+/* --- Entry Animation (Reveal) --- */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 768px) {
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+}

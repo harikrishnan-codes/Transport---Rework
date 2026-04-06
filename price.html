@@ -44,79 +44,118 @@
         </div>
     </nav>
 
-    <!-- Pricing Hero Section -->
-    <section class="pricing-hero" id="pricing-hero">
-        <div class="container">
-            <div class="pricing-hero-text">
-                <span class="badge">Clear Rates</span>
-                <h1>Transparent Pricing,<br> <span class="highlight">Zero Hidden Fees</span></h1>
-                <p>Select the shipping velocity that properly balances your budget against your cargo's urgency. Scalable packages designed for modern business.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Pricing Packages -->
-    <section class="section bg-gray" id="pricing-cards">
-        <div class="container">
-            <div class="pricing-grid">
-                <!-- Standard -->
-                <div class="pricing-card reveal-up">
-                    <div class="pricing-header">
-                        <h3>Standard Freight</h3>
-                        <p>Cost-effective regular transit for flexible timelines</p>
-                    </div>
-                    <div class="pricing-price">$45<span>/ pallet</span></div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Standard 5-7 Day Delivery</li>
-                        <li><i class="fas fa-check"></i> Basic GPS Tracking Portal</li>
-                        <li><i class="fas fa-check"></i> Automated Email Updates</li>
-                        <li><i class="fas fa-check"></i> Standard Port Handling</li>
-                        <li><i class="fas fa-times"></i> Priority Terminal Loading</li>
-                        <li><i class="fas fa-times"></i> Dedicated Account Manager</li>
-                    </ul>
-                    <button class="btn btn-outline" style="width: 100%;">Select Standard</button>
+
+
+
+
+  <section class="pricing-hero" id="pricing-hero">
+    <div class="pricing-hero-bg">
+        <img src="https://images.unsplash.com/photo-1577705998148-6da4f3963bc8?auto=format&fit=crop&w=1920&q=80" alt="Global Trade Pricing">
+        <div class="pricing-hero-overlay"></div>
+    </div>
+    
+    <div class="container pricing-relative">
+        <header class="pricing-hero-content reveal-up">
+            <div class="subtitle-wrapper">
+                <span class="line line-white"></span>
+                <span class="subtitle text-white">Investment Tiers</span>
+            </div>
+            <h1>Transparent Pricing,<br> <span class="highlight">Zero Hidden Fees</span></h1>
+            <p>Select the shipping velocity that properly balances your budget against your cargo's urgency. Scalable packages designed for modern business.</p>
+            
+            <div class="pricing-hero-actions">
+                <a href="#quote" class="btn btn-primary">Custom Quote</a>
+                <a href="#methods" class="btn btn-outline-white">View Methods</a>
+            </div>
+        </header>
+    </div>
+
+    <div class="scroll-down-indicator">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="pricing-section section bg-gray" id="pricing-cards">
+    <div class="container">
+        <div class="pricing-grid">
+            <div class="pricing-card reveal-up">
+                <div class="pricing-header">
+                    <span class="plan-type">Flexible</span>
+                    <h3>Standard Freight</h3>
+                    <p>Cost-effective regular transit for flexible timelines</p>
                 </div>
-                
-                <!-- Priority (Popular) -->
-                <div class="pricing-card popular reveal-up" style="transition-delay: 0.1s">
-                    <div class="popular-badge">POPULAR</div>
-                    <div class="pricing-header">
-                        <h3>Priority Express</h3>
-                        <p>Perfectly balanced speed and guaranteed reliability</p>
-                    </div>
-                    <div class="pricing-price">$89<span>/ pallet</span></div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Express 2-3 Day Delivery</li>
-                        <li><i class="fas fa-check"></i> Real-time LIVE Telemetry</li>
-                        <li><i class="fas fa-check"></i> SMS & Push Notification Updates</li>
-                        <li><i class="fas fa-check"></i> Priority Terminal Loading & Unloading</li>
-                        <li><i class="fas fa-check"></i> 100% Guaranteed Delivery Window</li>
-                        <li><i class="fas fa-times"></i> Dedicated Account Manager</li>
-                    </ul>
-                    <button class="btn btn-primary" style="width: 100%;">Select Priority</button>
+                <div class="pricing-price">$45<span class="unit">/ pallet</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Standard 5-7 Day Delivery</li>
+                    <li><i class="fas fa-check"></i> Basic GPS Tracking Portal</li>
+                    <li><i class="fas fa-check"></i> Automated Email Updates</li>
+                    <li><i class="fas fa-check"></i> Standard Port Handling</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Priority Loading</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Account Manager</li>
+                </ul>
+                <div class="pricing-footer">
+                    <button class="btn btn-outline-dark">Select Standard</button>
                 </div>
-                
-                <!-- Enterprise -->
-                <div class="pricing-card reveal-up" style="transition-delay: 0.2s">
-                    <div class="pricing-header">
-                        <h3>Enterprise Air</h3>
-                        <p>Maximum speed global velocity for critical products</p>
-                    </div>
-                    <div class="pricing-price">$195<span>/ pallet</span></div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Same & Next Day Global Delivery</li>
-                        <li><i class="fas fa-check"></i> Real-time LIVE Telemetry & Video</li>
-                        <li><i class="fas fa-check"></i> Immediate Customs Bypass Queue</li>
-                        <li><i class="fas fa-check"></i> Complete Premium Insurance included</li>
-                        <li><i class="fas fa-check"></i> Dedicated 24/7 Account Manager</li>
-                        <li><i class="fas fa-check"></i> Unlimited API Integration Support</li>
-                    </ul>
-                    <button class="btn btn-outline" style="width: 100%;">Select Enterprise</button>
+            </div>
+            
+            <div class="pricing-card popular reveal-up" style="transition-delay: 0.1s">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <span class="plan-type">Optimized</span>
+                    <h3>Priority Express</h3>
+                    <p>Perfectly balanced speed and guaranteed reliability</p>
+                </div>
+                <div class="pricing-price">$89<span class="unit">/ pallet</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Express 2-3 Day Delivery</li>
+                    <li><i class="fas fa-check"></i> Real-time LIVE Telemetry</li>
+                    <li><i class="fas fa-check"></i> SMS & Push Notifications</li>
+                    <li><i class="fas fa-check"></i> Priority Terminal Loading</li>
+                    <li><i class="fas fa-check"></i> 100% Guaranteed Window</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Account Manager</li>
+                </ul>
+                <div class="pricing-footer">
+                    <button class="btn btn-primary">Select Priority</button>
+                </div>
+            </div>
+            
+            <div class="pricing-card reveal-up" style="transition-delay: 0.2s">
+                <div class="pricing-header">
+                    <span class="plan-type">Unlimited</span>
+                    <h3>Enterprise Air</h3>
+                    <p>Maximum speed global velocity for critical products</p>
+                </div>
+                <div class="pricing-price">$195<span class="unit">/ pallet</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Same & Next Day Delivery</li>
+                    <li><i class="fas fa-check"></i> Real-time Video Telemetry</li>
+                    <li><i class="fas fa-check"></i> Customs Bypass Queue</li>
+                    <li><i class="fas fa-check"></i> Premium Insurance Included</li>
+                    <li><i class="fas fa-check"></i> 24/7 Account Manager</li>
+                    <li><i class="fas fa-check"></i> API Integration Support</li>
+                </ul>
+                <div class="pricing-footer">
+                    <button class="btn btn-outline-dark">Select Enterprise</button>
                 </div>
             </div>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
+
+
+
+
+
+
+    
 
     <!-- Distance Zone Base Multipliers -->
     <section class="section" id="zone-pricing">
@@ -158,6 +197,15 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
 
     <!-- Vehicle Fleet Base Rates -->
     <section class="section" id="vehicle-rates" style="background-color: var(--text-dark); color: white;">
@@ -224,39 +272,63 @@
         </div>
     </section>
 
-    <!-- Pricing Add-ons -->
-    <section class="section" id="addons">
-        <div class="container">
-            <div class="section-header">
-                <h5 class="subtitle">Customize Your Route</h5>
-                <h2>Available Service Add-Ons</h2>
-                <p>Enhance your base package with specialized logistical adjustments needed for your specific cargo.</p>
+
+
+
+
+
+
+
+<section class="addons-section section" id="addons">
+    <div class="container">
+        <header class="section-header reveal-up">
+            <div class="subtitle-wrapper">
+                <span class="line"></span>
+                <span class="subtitle">Customize Your Route</span>
             </div>
-            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="service-card reveal-up">
-                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+            <h2>Specialized <span class="highlight">Add-Ons</span></h2>
+            <p>Enhance your base package with specialized logistical adjustments needed for your specific cargo requirements.</p>
+        </header>
+
+        <div class="addons-list">
+            <div class="addon-row reveal-up">
+                <div class="addon-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="addon-info">
                     <h3>Premium Insurance</h3>
-                    <p>Add zero-deductible full-value protection for high-risk cargo at just 2% of declared value.</p>
+                    <p>Add zero-deductible full-value protection for high-risk cargo.</p>
                 </div>
-                <div class="service-card reveal-up" style="transition-delay: 0.1s">
-                    <div class="service-icon"><i class="fas fa-thermometer-half"></i></div>
+                <div class="addon-price">2% <small>of value</small></div>
+            </div>
+
+            <div class="addon-row reveal-up" style="transition-delay: 0.1s">
+                <div class="addon-icon"><i class="fas fa-thermometer-half"></i></div>
+                <div class="addon-info">
                     <h3>Climate Control</h3>
-                    <p>Active thermal regulation for $+25 per pallet. Ideal for medical or perishable goods.</p>
+                    <p>Active thermal regulation for medical or perishable goods.</p>
                 </div>
-                <div class="service-card reveal-up" style="transition-delay: 0.2s">
-                    <div class="service-icon"><i class="fas fa-boxes"></i></div>
+                <div class="addon-price">+$25 <small>/ pallet</small></div>
+            </div>
+
+            <div class="addon-row reveal-up" style="transition-delay: 0.2s">
+                <div class="addon-icon"><i class="fas fa-boxes"></i></div>
+                <div class="addon-info">
                     <h3>Smart Storage</h3>
-                    <p>Hold your shipment securely in our api-enabled holding facility for only $10/day per unit.</p>
+                    <p>Hold your shipment securely in our API-enabled holding facility.</p>
                 </div>
-                <div class="service-card reveal-up" style="transition-delay: 0.3s">
-                    <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+                <div class="addon-price">$10 <small>/ day</small></div>
+            </div>
+
+            <div class="addon-row reveal-up" style="transition-delay: 0.3s">
+                <div class="addon-icon"><i class="fas fa-file-signature"></i></div>
+                <div class="addon-info">
                     <h3>Customs Broker</h3>
-                    <p>Have our agents manage complicated border paperwork securely for a flat $150 filing fee.</p>
+                    <p>Our agents manage complicated border paperwork securely.</p>
                 </div>
+                <div class="addon-price">$150 <small>flat fee</small></div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
 
 
     <!-- Footer -->

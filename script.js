@@ -147,3 +147,89 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(counterSection);
     }
 });
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Reveal animations
+    const reveal = () => {
+        const reveals = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up');
+        reveals.forEach(el => {
+            el.classList.add('active'); // Simply add active to trigger CSS transition
+        });
+    };
+
+    // Small delay for smooth entry
+    setTimeout(reveal, 100);
+});
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Reveal Logic (Assuming you have this elsewhere)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+
+    // --- Testimonial Auto-Swap Logic ---
+    const swapTexts = document.getElementById('swapTexts');
+    const swapImages = document.getElementById('swapImages');
+    const swapPagination = document.getElementById('swapPagination');
+
+    if (swapTexts && swapImages && swapPagination) {
+        const textItems = swapTexts.querySelectorAll('.testimonial-item');
+        const imageItems = swapImages.querySelectorAll('img');
+        const dots = swapPagination.querySelectorAll('.dot');
+        const testimonialCount = textItems.length;
+        let currentIndex = 0;
+        let swapInterval;
+
+        const updateTestimonial = (index) => {
+            // Remove active class from all
+            textItems.forEach(item => item.classList.remove('active'));
+            imageItems.forEach(item => item.classList.remove('active'));
+            dots.forEach(item => item.classList.remove('active'));
+
+            // Add active class to the current one
+            textItems[index].classList.add('active');
+            imageItems[index].classList.add('active');
+            dots[index].classList.add('active');
+            
+            currentIndex = index;
+        };
+
+        const autoSwap = () => {
+            let nextIndex = (currentIndex + 1) % testimonialCount;
+            updateTestimonial(nextIndex);
+        };
+
+        // Start Auto-Swapping every 7 seconds
+        swapInterval = setInterval(autoSwap, 7000);
+
+        // Manual Pagination (Click to change)
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(swapInterval); // Stop auto-swap on user click
+                updateTestimonial(index);
+                // Optional: restart auto-swap after interaction
+                swapInterval = setInterval(autoSwap, 7000); 
+            });
+        });
+    }
+});

@@ -29,12 +29,14 @@
                 <a href="service.html">Services</a>
                 <a href="price.html">Pricing</a>
                 <div class="mobile-actions">
-                    <button class="btn btn-outline track-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+                    <button class="btn btn-outline track-btn" onclick="window.location.href='contact.html'">Contact
+                        Us</button>
                     <button class="btn btn-primary" onclick="window.location.href='sign.html'">Sign Up</button>
                 </div>
             </div>
             <div class="nav-right">
-                <button class="btn btn-outline track-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+                <button class="btn btn-outline track-btn" onclick="window.location.href='contact.html'">Contact
+                    Us</button>
                 <button class="btn btn-primary" onclick="window.location.href='sign.html'">Sign Up</button>
                 <div class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -43,257 +45,575 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+
+
+
+
+
+
     <section class="hero" id="home">
         <div class="hero-bg">
-            <img src="./assets/hero.webp"
-                alt="Logistics background">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="./assets/video.mp4" type="video/mp4">
+                <img src="./assets/hero.webp" alt="Logistics background">
+            </video>
             <div class="hero-overlay"></div>
         </div>
-        <div class="container hero-content">
-            <div class="hero-text glass-card">
-                <span class="badge">#1 Logistics Provider</span>
-                <h1>Next-Gen Transport & <span class="highlight">Global Logistics</span></h1>
-                <p>Seamlessly connecting businesses and individuals worldwide with our blazing fast, ultra-secure, and
-                    reliable transportation network.</p>
-                <div class="hero-actions">
-                    <button class="btn btn-primary btn-large">Start Shipping <i class="fas fa-arrow-right"></i></button>
-                    <button class="btn btn-secondary btn-large"><i class="fas fa-play-circle"></i> Watch Video</button>
+
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content reveal-left">
+                    <div class="hero-badge-container">
+                        <span class="badge"><i class="fas fa-shield-alt"></i> #1 Global Logistics Provider</span>
+                    </div>
+                    <h1>Next-Gen Transport & <br><span class="highlight">Global Logistics</span></h1>
+                    <p>Seamlessly connecting businesses and individuals worldwide with our blazing fast, ultra-secure,
+                        and reliable transportation network.</p>
+
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large">Start Shipping <i
+                                class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-secondary btn-large"><i class="fas fa-play-circle"></i> Watch
+                            Video</button>
+                    </div>
+
+                    <div class="tracking-container glass-card">
+                        <div class="tracking-header">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Track your shipment</h3>
+                        </div>
+                        <div class="tracking-input-group">
+                            <input type="text" placeholder="Enter Tracking ID (e.g., SWL-123456)">
+                            <button class="btn btn-primary track-submit">
+                                <span>Track</span> <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="tracking-box">
-                    <h3>Track your shipment</h3>
-                    <div class="tracking-input-group">
-                        <i class="fas fa-box"></i>
-                        <input type="text" placeholder="Enter Tracking ID (e.g., SWL-123456)">
-                        <button class="btn btn-primary track-submit">Track <i class="fas fa-search"></i></button>
+                <div class="hero-stats-grid reveal-right">
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <h2>99%</h2>
+                        <p>On-Time Delivery</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-globe-americas"></i></div>
+                        <h2>150+</h2>
+                        <p>Countries Served</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-headset"></i></div>
+                        <h2>24/7</h2>
+                        <p>Expert Support</p>
+                    </div>
+                    <div class="stat-card glass-card accent-card">
+                        <div class="stat-icon"><i class="fas fa-box-open"></i></div>
+                        <h2>10M+</h2>
+                        <p>Annual Parcels</p>
                     </div>
                 </div>
             </div>
-            <div class="hero-stats">
-                <div class="stat-card">
-                    <h2>99%</h2>
-                    <p>On-Time Delivery</p>
-                </div>
-                <div class="stat-card">
-                    <h2>150+</h2>
-                    <p>Countries Served</p>
-                </div>
-                <div class="stat-card">
-                    <h2>24/7</h2>
-                    <p>Active Support</p>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services section" id="services">
+
+
+
+
+
+
+    <section class="partners-section">
         <div class="container">
-            <div class="section-header">
-                <h5 class="subtitle">Our Services</h5>
-                <h2>Comprehensive Logistics Solutions</h2>
-                <p>We provide a wide array of customized delivery and transport services to meet your every need.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card reveal-up">
-                    <div class="service-icon"><i class="fas fa-plane-departure"></i></div>
-                    <h3>Air Freight</h3>
-                    <p>Rapid, secure, and time-critical deliveries across the globe via our extensive network of airline
-                        partners.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            <header class="section-header reveal-up">
+                <div class="subtitle-wrapper">
+                    <span class="line"></span>
+                    <span class="subtitle">Global Synergy</span>
                 </div>
-                <div class="service-card reveal-up" style="transition-delay: 0.1s">
-                    <div class="service-icon"><i class="fas fa-ship"></i></div>
-                    <h3>Ocean Freight</h3>
-                    <p>Cost-effective solutions for large volumes, offering full container load (FCL) and less than
-                        container load (LCL).</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card reveal-up" style="transition-delay: 0.2s">
-                    <div class="service-icon"><i class="fas fa-truck"></i></div>
-                    <h3>Road Transport</h3>
-                    <p>Flexible and reliable express road freight options connecting cities and countries domestically.
-                    </p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card reveal-up" style="transition-delay: 0.3s">
-                    <div class="service-icon"><i class="fas fa-warehouse"></i></div>
-                    <h3>Warehousing</h3>
-                    <p>State-of-the-art storage facilities to keep your goods safe, secure, and ready for dispatch
-                        anytime.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h2>Trusted by <span class="highlight">Industry</span> Leaders</h2>
+                <p>Powering the supply chains of the world's most ambitious companies with precision and scale.</p>
+            </header>
+
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <div class="partner-item"><i class="fab fa-amazon"></i> <span>Amazon</span></div>
+                    <div class="partner-item"><i class="fab fa-fedex"></i> <span>FedEx</span></div>
+                    <div class="partner-item"><i class="fab fa-dhl"></i> <span>DHL Express</span></div>
+                    <div class="partner-item"><i class="fab fa-ups"></i> <span>UPS Global</span></div>
+                    <div class="partner-item"><i class="fab fa-shopify"></i> <span>Shopify</span></div>
+
+                    <div class="partner-item"><i class="fab fa-amazon"></i> <span>Amazon</span></div>
+                    <div class="partner-item"><i class="fab fa-fedex"></i> <span>FedEx</span></div>
+                    <div class="partner-item"><i class="fab fa-dhl"></i> <span>DHL Express</span></div>
+                    <div class="partner-item"><i class="fab fa-ups"></i> <span>UPS Global</span></div>
+                    <div class="partner-item"><i class="fab fa-shopify"></i> <span>Shopify</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="process section" id="process">
+
+
+
+    <section class="strategy-pillars section" id="strategy">
         <div class="container">
-            <div class="section-header">
-                <h5 class="subtitle">How It Works</h5>
-                <h2>Seamless Shipping Process</h2>
-                <p>We've simplified logistics so you can focus on your business.</p>
-            </div>
-            <div class="process-grid">
-                <div class="process-step reveal-up">
-                    <div class="step-number">01</div>
-                    <div class="step-icon"><i class="fas fa-box-open"></i></div>
-                    <h3>Book Shipment</h3>
-                    <p>Enter your details, choose a service, and get an instant quote online.</p>
+            <header class="section-header reveal-up">
+                <div class="subtitle-wrapper">
+                    <span class="line"></span>
+                    <span class="subtitle">Our Strategy</span>
                 </div>
-                <div class="process-step reveal-up" style="transition-delay: 0.1s">
-                    <div class="step-number">02</div>
-                    <div class="step-icon"><i class="fas fa-truck-loading"></i></div>
-                    <h3>We Pick It Up</h3>
-                    <p>Our team collects your package from your doorstep or warehouse.</p>
+                <h2>The Three <span class="highlight">Pillars</span> of Excellence</h2>
+                <p>Our approach is built on three core foundations that ensure your cargo moves faster, safer, and
+                    smarter than ever before.</p>
+            </header>
+
+            <div class="pillars-wrapper reveal-up">
+                <div class="pillar-item active">
+                    <div class="pillar-content">
+                        <div class="pillar-icon"><i class="fas fa-microchip"></i></div>
+                        <div class="pillar-text">
+                            <span class="pillar-num">01</span>
+                            <h3>Intelligent Routing</h3>
+                            <p>We leverage real-time AI to analyze global traffic, weather patterns, and port
+                                congestion, ensuring your shipment always takes the path of least resistance.</p>
+                            <ul class="pillar-list">
+                                <li><i class="fas fa-check"></i> Live Data Analysis</li>
+                                <li><i class="fas fa-check"></i> Predictive Delays</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pillar-bg-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1580674271209-40b46033eb3e?auto=format&fit=crop&w=800&q=80"
+                        alt="Tech" class="pillar-img">
                 </div>
-                <div class="process-step reveal-up" style="transition-delay: 0.2s">
-                    <div class="step-number">03</div>
-                    <div class="step-icon"><i class="fas fa-route"></i></div>
-                    <h3>Fast Transit</h3>
-                    <p>Your cargo is routed through our optimized global network.</p>
+
+                <div class="pillar-item">
+                    <div class="pillar-content">
+                        <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="pillar-text">
+                            <span class="pillar-num">02</span>
+                            <h3>End-to-End Security</h3>
+                            <p>Safety isn't just a promise; it's a protocol. From biometric cargo locks to 24/7
+                                satellite surveillance, your goods are protected at every coordinate.</p>
+                            <ul class="pillar-list">
+                                <li><i class="fas fa-check"></i> Biometric Locks</li>
+                                <li><i class="fas fa-check"></i> 24/7 Monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pillar-bg-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80"
+                        alt="Security" class="pillar-img">
                 </div>
-                <div class="process-step reveal-up" style="transition-delay: 0.3s">
-                    <div class="step-number">04</div>
-                    <div class="step-icon"><i class="fas fa-home"></i></div>
-                    <h3>Safe Delivery</h3>
-                    <p>On-time delivery to the destination with proof and notifications.</p>
+
+                <div class="pillar-item">
+                    <div class="pillar-content">
+                        <div class="pillar-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="pillar-text">
+                            <span class="pillar-num">03</span>
+                            <h3>Sustainable Scaling</h3>
+                            <p>We are committed to a greener future. Our fleet optimization reduces carbon emissions
+                                without sacrificing the speed your business demands.</p>
+                            <ul class="pillar-list">
+                                <li><i class="fas fa-check"></i> Green Fleet</li>
+                                <li><i class="fas fa-check"></i> Optimized Loads</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pillar-bg-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80"
+                        alt="Sustainability" class="pillar-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Interactive Map placeholder -->
-    <section class="network section bg-gray" id="network">
-        <div class="container container-network">
-            <div class="network-content reveal-left">
-                <h5 class="subtitle">Global Reach</h5>
-                <h2>A Network that Spans the Entire Globe</h2>
-                <p>With distribution centers and strategic partners across 5 continents, SwiftLine ensures your cargo
-                    arrives safely no matter where it's headed.</p>
-                <ul class="check-list">
-                    <li><i class="fas fa-check-circle"></i> Real-time GPS tracking on all shipments</li>
-                    <li><i class="fas fa-check-circle"></i> Automated customs clearance handling</li>
-                    <li><i class="fas fa-check-circle"></i> Door-to-door delivery options</li>
-                    <li><i class="fas fa-check-circle"></i> Eco-friendly and sustainable vehicle fleet</li>
-                </ul>
-                <button class="btn btn-primary mt-4">View All Locations</button>
+
+
+
+
+
+
+
+
+
+    <section class="services-reveal section" id="services">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="subtitle">Our Capabilities</span>
+                <h2>Tailored <span class="highlight">Logistics</span> Excellence</h2>
             </div>
-            <div class="network-image reveal-right">
-                <div class="map-placeholder">
-                    <div class="pulse-point" style="top: 30%; left: 20%;"></div>
-                    <div class="pulse-point" style="top: 45%; left: 45%;"></div>
-                    <div class="pulse-point" style="top: 35%; left: 75%;"></div>
-                    <div class="pulse-point" style="top: 60%; left: 85%;"></div>
-                    <div class="pulse-point" style="top: 70%; left: 30%;"></div>
-                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                        alt="Global Network Map Base" style="opacity: 0.8; filter: grayscale(1) contrast(1.2);">
-                    <div class="map-overlay-layer"></div>
+
+            <div class="reveal-list">
+                <div class="reveal-item reveal-up">
+                    <div class="reveal-header">
+                        <div class="reveal-left-content">
+                            <span class="service-num">01</span>
+                            <h3>Air Freight Forwarding</h3>
+                        </div>
+                        <div class="reveal-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="reveal-body">
+                        <div class="reveal-inner-content">
+                            <p>Our priority air-bridge network connects major global hubs in under 24 hours. We provide
+                                end-to-end visibility and temperature-controlled options for sensitive cargo.</p>
+                            <div class="service-features">
+                                <span><i class="fas fa-bolt"></i> Next Day Delivery</span>
+                                <span><i class="fas fa-shield-alt"></i> Fully Insured</span>
+                            </div>
+                        </div>
+                        <div class="reveal-image">
+                            <img src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=600&q=80"
+                                alt="Air Freight">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-item reveal-up">
+                    <div class="reveal-header">
+                        <div class="reveal-left-content">
+                            <span class="service-num">02</span>
+                            <h3>Global Ocean Cargo</h3>
+                        </div>
+                        <div class="reveal-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="reveal-body">
+                        <div class="reveal-inner-content">
+                            <p>Cost-effective maritime solutions for high-volume trade. We manage complex customs
+                                documentation and provide FCL/LCL consolidation services globally.</p>
+                            <div class="service-features">
+                                <span><i class="fas fa-anchor"></i> Port-to-Port</span>
+                                <span><i class="fas fa-file-invoice"></i> Customs Handling</span>
+                            </div>
+                        </div>
+                        <div class="reveal-image">
+                            <img src="https://images.unsplash.com/photo-1494412574643-fc03d790f968?auto=format&fit=crop&w=600&q=80"
+                                alt="Ocean Cargo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-item reveal-up">
+                    <div class="reveal-header">
+                        <div class="reveal-left-content">
+                            <span class="service-num">03</span>
+                            <h3>Intelligent Warehousing</h3>
+                        </div>
+                        <div class="reveal-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="reveal-body">
+                        <div class="reveal-inner-content">
+                            <p>AI-powered inventory management with strategic distribution centers. Our facilities offer
+                                24/7 climate monitoring and automated pick-and-pack fulfillment.</p>
+                            <div class="service-features">
+                                <span><i class="fas fa-microchip"></i> AI Inventory</span>
+                                <span><i class="fas fa-box-open"></i> Fast Fulfillment</span>
+                            </div>
+                        </div>
+                        <div class="reveal-image">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80"
+                                alt="Warehousing">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Fleet Section -->
+
+
+
+
+
+
+
+
+    <section class="impact section" id="impact">
+        <div class="impact-bg-wrapper">
+            <img src="./assets/hero.webp" alt="Global Network" class="impact-img">
+            <div class="impact-overlay"></div>
+        </div>
+
+        <div class="container impact-relative">
+            <div class="section-header reveal-up">
+                <span class="subtitle white-sub">Our Global Reach</span>
+                <h2 class="text-white">Delivering Excellence <br>on a <span class="highlight">Global Scale</span></h2>
+                <p class="impact-desc">Numbers that define our commitment to speed, safety, and reliability across every
+                    border.</p>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-card reveal-up">
+                    <i class="fas fa-globe-americas"></i>
+                    <div class="stat-number"><span class="counter" data-target="150">0</span><span class="plus">+</span>
+                    </div>
+                    <p>Countries Reached</p>
+                </div>
+                <div class="impact-card reveal-up" style="transition-delay: 0.1s">
+                    <i class="fas fa-boxes"></i>
+                    <div class="stat-number"><span class="counter" data-target="10">0</span><span class="plus">M+</span>
+                    </div>
+                    <p>Packages Delivered</p>
+                </div>
+                <div class="impact-card reveal-up" style="transition-delay: 0.2s">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number"><span class="counter" data-target="50">0</span><span class="plus">K+</span>
+                    </div>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="impact-card reveal-up" style="transition-delay: 0.3s">
+                    <i class="fas fa-award"></i>
+                    <div class="stat-number"><span class="counter" data-target="22">0</span><span class="plus">+</span>
+                    </div>
+                    <p>Industry Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section class="network-reach section bg-gray" id="network">
+        <div class="container">
+            <div class="network-wrapper">
+
+                <div class="network-visual reveal-left">
+                    <div class="map-container">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80"
+                            alt="World Map" class="map-base">
+
+                        <div class="pulse-point" style="top: 25%; left: 20%;" data-location="North America"></div>
+                        <div class="pulse-point" style="top: 45%; left: 45%;" data-location="Europe"></div>
+                        <div class="pulse-point" style="top: 35%; left: 75%;" data-location="Asia"></div>
+                        <div class="pulse-point" style="top: 70%; left: 30%;" data-location="South America"></div>
+                        <div class="pulse-point" style="top: 65%; left: 85%;" data-location="Australia"></div>
+
+                        <div class="map-overlay-glass"></div>
+                    </div>
+                </div>
+
+                <div class="network-info reveal-right">
+                    <span class="subtitle">Global Presence</span>
+                    <h2>A Network Spanning <span class="highlight">5 Continents</span></h2>
+                    <p>With strategic hubs in every major trade lane, we ensure your cargo moves through the most
+                        efficient channels possible.</p>
+
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-microchip"></i></div>
+                            <div class="benefit-text">
+                                <h4>AI Route Optimization</h4>
+                                <p>Real-time traffic and weather analysis to find the fastest path.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-fingerprint"></i></div>
+                            <div class="benefit-text">
+                                <h4>Secure Chain of Custody</h4>
+                                <p>Biometric and GPS-locked tracking on every high-value shipment.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+                            <div class="benefit-text">
+                                <h4>Eco-Sustainable Fleet</h4>
+                                <p>Reducing carbon footprint via our expanding green vehicle network.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary mt-4">View All Hubs</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="fleet section" id="fleet">
         <div class="container">
-            <div class="section-header">
-                <h5 class="subtitle">Our Equipment</h5>
-                <h2>Modern & Reliable Fleet</h2>
-                <p>Equipped with state-of-the-art vehicles to handle any cargo type.</p>
+            <div class="section-header reveal-up">
+                <span class="subtitle">Our Equipment</span>
+                <h2>Modern & <span class="highlight">Reliable Fleet</span></h2>
+                <p>Equipped with state-of-the-art vehicles and vessels to handle any cargo type with maximum safety.</p>
             </div>
-            <div class="fleet-grid">
-                <div class="fleet-card reveal-up">
-                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+
+            <div class="fleet-bento-grid">
+                <div class="fleet-main-card reveal-left">
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80"
                         alt="Cargo Plane">
-                    <div class="fleet-info">
-                        <h3>Boeing Courier Jets</h3>
-                        <p>For urgent global deliveries</p>
+                    <div class="fleet-card-overlay">
+                        <div class="fleet-tag">Air Priority</div>
+                        <h3>Boeing 747-8F Cargo</h3>
+                        <p>Global long-haul capacity for time-critical oversized shipments.</p>
                     </div>
                 </div>
-                <div class="fleet-card reveal-up" style="transition-delay: 0.1s">
-                    <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Container Ship">
-                    <div class="fleet-info">
-                        <h3>DuraLine Carriers</h3>
-                        <p>Massive ocean freight capacity</p>
+
+                <div class="fleet-side-col">
+                    <div class="fleet-small-card reveal-right">
+                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80"
+                            alt="Container Ship">
+                        <div class="fleet-card-overlay">
+                            <h3>Ocean Carriers</h3>
+                            <p>18,000+ TEU capacity vessels.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="fleet-card reveal-up" style="transition-delay: 0.2s">
-                    <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Transport Truck">
-                    <div class="fleet-info">
-                        <h3>Volvo FH Express</h3>
-                        <p>Reliable continental road transport</p>
+                    <div class="fleet-small-card reveal-right" style="transition-delay: 0.1s">
+                        <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=800&q=80"
+                            alt="Transport Truck">
+                        <div class="fleet-card-overlay">
+                            <h3>Eco-Trucking</h3>
+                            <p>Euro 6 compliant green fleet.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials section bg-gray" id="testimonials">
+
+
+
+
+
+    <!-- Latest Insights Section -->
+    <section class="news section" id="news">
         <div class="container">
             <div class="section-header">
-                <h5 class="subtitle">Client Reviews</h5>
-                <h2>Trusted by Businesses</h2>
-                <p>See what our partners say about our logistics services.</p>
+                <h5 class="subtitle">Latest Insights</h5>
+                <h2>Logistics News & Trends</h2>
+                <p>Stay updated with the latest in the transport, supply chain, and global shipping industry.</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card reveal-left">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i>
+            <div class="news-grid">
+                <div class="news-card reveal-left">
+                    <div class="news-img">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="News Image">
+                        <div class="news-date">Oct 15, 2026</div>
                     </div>
-                    <p class="quote">"SwiftLine completely transformed our supply chain. Their global network and
-                        tracking features give us peace of mind for every shipment."</p>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-                                alt="Client">
-                        </div>
-                        <div>
-                            <h4>Sarah Jenkins</h4>
-                            <p>Operations Manager, TechCorp</p>
-                        </div>
+                    <div class="news-content">
+                        <h4><a href="#">The Future of Eco-Friendly Shipping</a></h4>
+                        <p>How SwiftLine is implementing green fleets to reduce carbon footprint in logistics.</p>
+                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="testimonial-card reveal-up">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="news-card reveal-up">
+                    <div class="news-img">
+                        <img src="https://images.unsplash.com/photo-1566576721323-24237f3946cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="News Image">
+                        <div class="news-date">Oct 10, 2026</div>
                     </div>
-                    <p class="quote">"The fastest and most reliable cargo service we have ever used. Their API
-                        integration directly into our e-commerce platform is seamless."</p>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-                                alt="Client">
-                        </div>
-                        <div>
-                            <h4>David Chen</h4>
-                            <p>CEO, GlobalGoods</p>
-                        </div>
+                    <div class="news-content">
+                        <h4><a href="#">Navigating Global Customs</a></h4>
+                        <p>Our expert guide to fast and hassle-free customs clearance for international shipments.</p>
+                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="testimonial-card reveal-right">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <div class="news-card reveal-right">
+                    <div class="news-img">
+                        <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="News Image">
+                        <div class="news-date">Oct 05, 2026</div>
                     </div>
-                    <p class="quote">"Their ocean freight handling is excellent. We never have to worry about customs
-                        documentation, they handle everything flawlessly."</p>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-                                alt="Client">
+                    <div class="news-content">
+                        <h4><a href="#">Tech in Supply Chain</a></h4>
+                        <p>Why real-time GPS tracking is turning into the gold standard for global deliveries.</p>
+                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="testimonial-swap section" id="testimonials">
+        <div class="test-bg-accent test-blob-1"></div>
+        <div class="test-bg-accent test-blob-2"></div>
+
+        <div class="container">
+            <header class="section-header reveal-up">
+                <div class="subtitle-wrapper">
+                    <span class="line"></span>
+                    <span class="subtitle">Client Success</span>
+                </div>
+                <h2> Voices of <span class="highlight">Success</span></h2>
+                <p>Don't just take our word for it. Here is how we’ve helped global enterprises streamline their supply
+                    chains.</p>
+            </header>
+
+            <div class="swap-wrapper glass-card reveal-up">
+                <div class="swap-image-container">
+                    <div class="swap-images" id="swapImages">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+                            alt="Client 1" class="active">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+                            alt="Client 2">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80"
+                            alt="Client 3">
+                    </div>
+                    <i class="fas fa-quote-right water-icon"></i>
+                </div>
+
+                <div class="swap-content-container">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>5.0</span>
+                    </div>
+
+                    <div class="swap-texts" id="swapTexts">
+                        <div class="testimonial-item active">
+                            <p class="main-quote">"SwiftLine completely transformed our supply chain. Their global
+                                network and tracking features give us absolute peace of mind."</p>
+                            <div class="client-meta">
+                                <h4>Elena Rodriguez</h4>
+                                <p>Director of Operations, Moda Inc.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4>Elena Rodriguez</h4>
-                            <p>Logistics Director, Moda Inc.</p>
+                        <div class="testimonial-item">
+                            <p class="main-quote">"The level of professionalism in their ocean freight handling is
+                                unmatched. We haven't had a single customs delay since switching."</p>
+                            <div class="client-meta">
+                                <h4>David Chen</h4>
+                                <p>CEO, GlobalGoods Ltd.</p>
+                            </div>
                         </div>
+                        <div class="testimonial-item">
+                            <p class="main-quote">"Air Freight forwarding with SwiftLine is lightning fast. They are the
+                                most reliable partner we've used in a decade."</p>
+                            <div class="client-meta">
+                                <h4>Sarah Jenkins</h4>
+                                <p>Global Sourcing, TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swap-pagination" id="swapPagination">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                 </div>
             </div>
@@ -353,90 +673,33 @@
         </div>
     </section>
 
-    <!-- Global Impact / Stats with Overlay -->
-    <section class="impact-stats" id="impact">
-        <div class="impact-bg"></div>
-        <div class="impact-overlay"></div>
-        <div class="container impact-content">
-            <div class="section-header text-white">
-                <h5 class="subtitle subtitle-white">Global Impact</h5>
-                <h2>Delivering Excellence at Scale</h2>
-                <p>Numbers speak louder than words. We've set the standard for shipping global cargo securely and on
-                    time.</p>
-            </div>
-            <div class="impact-grid">
-                <div class="impact-card reveal-up">
-                    <i class="fas fa-boxes"></i>
-                    <h3>10M+</h3>
-                    <p>Packages Delivered</p>
-                </div>
-                <div class="impact-card reveal-up" style="transition-delay: 0.1s">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3>150+</h3>
-                    <p>Countries Reached</p>
-                </div>
-                <div class="impact-card reveal-up" style="transition-delay: 0.2s">
-                    <i class="fas fa-users"></i>
-                    <h3>50K+</h3>
-                    <p>Happy Clients</p>
-                </div>
-                <div class="impact-card reveal-up" style="transition-delay: 0.3s">
-                    <i class="fas fa-award"></i>
-                    <h3>20+</h3>
-                    <p>Industry Awards</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Latest Insights Section -->
-    <section class="news section" id="news">
-        <div class="container">
-            <div class="section-header">
-                <h5 class="subtitle">Latest Insights</h5>
-                <h2>Logistics News & Trends</h2>
-                <p>Stay updated with the latest in the transport, supply chain, and global shipping industry.</p>
-            </div>
-            <div class="news-grid">
-                <div class="news-card reveal-left">
-                    <div class="news-img">
-                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="News Image">
-                        <div class="news-date">Oct 15, 2026</div>
-                    </div>
-                    <div class="news-content">
-                        <h4><a href="#">The Future of Eco-Friendly Shipping</a></h4>
-                        <p>How SwiftLine is implementing green fleets to reduce carbon footprint in logistics.</p>
-                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="news-card reveal-up">
-                    <div class="news-img">
-                        <img src="https://images.unsplash.com/photo-1566576721323-24237f3946cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="News Image">
-                        <div class="news-date">Oct 10, 2026</div>
-                    </div>
-                    <div class="news-content">
-                        <h4><a href="#">Navigating Global Customs</a></h4>
-                        <p>Our expert guide to fast and hassle-free customs clearance for international shipments.</p>
-                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="news-card reveal-right">
-                    <div class="news-img">
-                        <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="News Image">
-                        <div class="news-date">Oct 05, 2026</div>
-                    </div>
-                    <div class="news-content">
-                        <h4><a href="#">Tech in Supply Chain</a></h4>
-                        <p>Why real-time GPS tracking is turning into the gold standard for global deliveries.</p>
-                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Why Choose Us -->
     <section class="about section" id="about">
@@ -454,6 +717,10 @@
             </div>
         </div>
     </section>
+
+
+
+
 
     <!-- Footer -->
     <footer class="footer">
