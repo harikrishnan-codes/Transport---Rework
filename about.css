@@ -1,7 +1,8 @@
 /* --- About Hero Styles --- */
 .about-hero {
     position: relative;
-    height: 85vh; /* Professional internal page height */
+    height: 85vh;
+    /* Professional internal page height */
     min-height: 600px;
     display: flex;
     align-items: center;
@@ -25,17 +26,22 @@
 }
 
 @keyframes kenBurns {
-    from { transform: scale(1); }
-    to { transform: scale(1.15); }
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.15);
+    }
 }
 
 .about-hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(105deg, 
-        rgba(26, 26, 46, 0.9) 0%, 
-        rgba(26, 26, 46, 0.7) 50%,
-        rgba(26, 26, 46, 0.3) 100%);
+    background: linear-gradient(105deg,
+            rgba(26, 26, 46, 0.9) 0%,
+            rgba(26, 26, 46, 0.7) 50%,
+            rgba(26, 26, 46, 0.3) 100%);
     z-index: 2;
 }
 
@@ -47,6 +53,15 @@
 
 .about-hero-content {
     max-width: 800px;
+}
+
+.subtitle-wrapper .text-white{
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius:50px;
+    color: var(--bg-gray);
+    margin-top: 60px;
+    font-size: 12px;
 }
 
 .about-hero-content h1 {
@@ -117,8 +132,15 @@
 }
 
 @keyframes scrollWheel {
-    0% { opacity: 1; transform: translate(-50%, 0); }
-    100% { opacity: 0; transform: translate(-50%, 15px); }
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 15px);
+    }
 }
 
 /* --- 768px Tablet & Mobile Media Query --- */
@@ -174,7 +196,8 @@
 /* --- Mission & Vision Styles --- */
 .mission-section {
     position: relative;
-    background-color: var(--bg-gray); /* Light gray for contrast */
+    background-color: var(--bg-gray);
+    /* Light gray for contrast */
 }
 
 .mission-grid {
@@ -260,13 +283,14 @@
     right: 20px;
     font-size: 5rem;
     font-weight: 900;
-    color: var(--text-dark);
-    opacity: 0.03; /* Extremely subtle */
+    color: var(--primary-color);
+    opacity: 0.03;
+    /* Extremely subtle */
     transition: var(--transition);
 }
 
 .mission-card:hover .card-number {
-    opacity: 0.08;
+    opacity: 0.1;
     transform: translateY(-10px);
 }
 
@@ -277,7 +301,8 @@
     }
 
     .mission-grid {
-        grid-template-columns: 1fr; /* Stack vertically on mobile */
+        grid-template-columns: 1fr;
+        /* Stack vertically on mobile */
         gap: 20px;
     }
 
@@ -405,7 +430,8 @@
     }
 
     .value-item::after {
-        display: none; /* Hide vertical line on small screens */
+        display: none;
+        /* Hide vertical line on small screens */
     }
 
     .value-number {
@@ -421,10 +447,10 @@
     }
 
     .value-item:hover {
-        padding-left: 0; /* Keep alignment clean on mobile */
+        padding-left: 0;
+        /* Keep alignment clean on mobile */
     }
 }
-
 
 
 
@@ -437,45 +463,65 @@
     position: relative;
     padding: 120px 0;
     overflow: hidden;
-    background-color: var(--text-dark); /* Falls back to deep navy */
     color: var(--white);
 }
 
-/* Base Background Image */
+/* Background Wrapper */
 .impact-bg-wrap {
     position: absolute;
     inset: 0;
     z-index: 1;
 }
 
+/* ORIGINAL IMAGE (NO FILTER ❌) */
 .impact-bg-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(1) contrast(1.1) brightness(0.6);
 }
 
-/* Premium Radial Mask Overlay (JS Powered) */
+/* 🔥 OVERLAY (MAIN PART) */
 .impact-mask-overlay {
     position: absolute;
     inset: 0;
     z-index: 2;
-    background: radial-gradient(circle at center, transparent, rgba(26, 26, 46, 0.9));
+
+    background: radial-gradient(
+        circle,
+        rgba(47, 42, 42, 0.7),
+        rgba(70, 62, 64, 0.7)
+    );
 }
 
+/* CONTENT ABOVE */
 .impact-relative {
     position: relative;
-    z-index: 5; /* Above mask */
+    z-index: 5;
     text-align: center;
 }
 
-/* Typography Overrides */
-.text-white { color: var(--white); }
-.text-white-80 { color: rgba(255, 255, 255, 0.8); max-width: 550px; margin: 0 auto; }
-.line.line-white { background-color: var(--primary-color) !important; opacity: 0.4; }
-.subtitle.subtitle-white { color: var(--primary-color) !important; border-bottom: 1px solid rgba(255,255,255,0.2); }
+/* Typography */
+.text-white {
+    color: var(--white);
+}
 
-/* Impact Grid & Cards */
+.text-white-80 {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.line.line-white {
+    background-color: var(--primary-color) !important;
+    opacity: 0.4;
+}
+
+.subtitle.subtitle-white {
+    color: var(--primary-color) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Grid */
 .impact-grid-modern {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -483,10 +529,11 @@
     margin-top: 80px;
 }
 
+/* Cards */
 .impact-stat-card {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 50px 30px;
     border-radius: 30px;
     transition: var(--transition);
@@ -496,50 +543,53 @@
 }
 
 .impact-stat-card:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-12px);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-10px);
     border-color: var(--primary-color);
 }
 
+/* Icon */
 .stat-icon-wrap {
     font-size: 2.8rem;
     color: var(--primary-color);
     margin-bottom: 25px;
 }
 
+/* Numbers */
 .stat-count {
     font-size: 3.5rem;
     font-weight: 800;
     color: var(--white);
     line-height: 1;
     margin-bottom: 10px;
-    letter-spacing: -0.02em;
 }
 
 .stat-count .plus {
     font-size: 1.5rem;
     color: var(--primary-color);
     margin-left: 5px;
-    vertical-align: top;
-    margin-top: 10px;
-    display: inline-block;
 }
 
+/* Text */
 .impact-stat-card p {
     font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     margin: 0;
 }
 
-/* --- 768px Tablet & Mobile Media Query --- */
+/* --- Responsive --- */
 @media (max-width: 768px) {
-    .impact-stats-modern { padding: 80px 0; }
-    .impact-relative { text-align: left; }
-    .subtitle-wrapper { justify-content: flex-start; }
-    .text-white-80 { text-align: left; margin: 0; }
+
+    .impact-stats-modern {
+        padding: 80px 0;
+    }
+
+    .impact-relative {
+        text-align: left;
+    }
 
     .impact-grid-modern {
         grid-template-columns: 1fr;
@@ -551,13 +601,12 @@
         padding: 30px;
         flex-direction: row;
         align-items: center;
-        gap: 25px;
+        gap: 20px;
     }
 
     .stat-icon-wrap {
         font-size: 2rem;
         margin-bottom: 0;
-        flex-shrink: 0;
     }
 
     .stat-info {
@@ -566,14 +615,10 @@
 
     .stat-count {
         font-size: 2.2rem;
-        margin-bottom: 5px;
-    }
-
-    .stat-count .plus {
-        font-size: 1.2rem;
-        margin-top: 5px;
     }
 }
+
+
 
 
 
@@ -612,8 +657,15 @@
 }
 
 /* Left & Right Logic */
-.timeline-item.left { left: 0; text-align: right; }
-.timeline-item.right { left: 50%; text-align: left; }
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
 
 /* The Animated Dot */
 .timeline-dot {
@@ -628,8 +680,13 @@
     transition: var(--transition);
 }
 
-.timeline-item.left .timeline-dot { right: -10px; }
-.timeline-item.right .timeline-dot { left: -10px; }
+.timeline-item.left .timeline-dot {
+    right: -10px;
+}
+
+.timeline-item.right .timeline-dot {
+    left: -10px;
+}
 
 .timeline-item:hover .timeline-dot {
     background: var(--primary-color);
@@ -799,7 +856,8 @@
 /* --- 768px Tablet & Mobile Optimization --- */
 @media (max-width: 768px) {
     .timeline-line {
-        left: 20px; /* Move line to the left */
+        left: 20px;
+        /* Move line to the left */
     }
 
     .timeline-item {
@@ -810,7 +868,8 @@
     }
 
     .timeline-dot {
-        left: 10px !important; /* Align dot with the left-aligned line */
+        left: 10px !important;
+        /* Align dot with the left-aligned line */
     }
 
     .year-label {
