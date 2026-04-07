@@ -18,7 +18,8 @@
 </head>
 
 <body>
-    <!-- Navbar -->
+
+
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="price.html" class="logo">
@@ -86,7 +87,7 @@
 
 
 
-    <section class="pricing-section section bg-gray" id="pricing-cards">
+    <section class="pricing-section section bg-gray" id="pricing-cards" data-aos="fade-left">
         <div class="container">
             <div class="pricing-grid">
                 <div class="pricing-card reveal-up">
@@ -105,7 +106,8 @@
                         <li class="disabled"><i class="fas fa-times"></i> Account Manager</li>
                     </ul>
                     <div class="pricing-footer">
-                        <button class="btn btn-outline-dark" onclick="window.location.href='./404.html'">Select Standard</button>
+                        <button class="btn btn-outline-dark" onclick="window.location.href='./404.html'">Select
+                            Standard</button>
                     </div>
                 </div>
 
@@ -126,7 +128,8 @@
                         <li class="disabled"><i class="fas fa-times"></i> Account Manager</li>
                     </ul>
                     <div class="pricing-footer">
-                        <button class="btn btn-primary" onclick="window.location.href='./404.html'">Select Priority</button>
+                        <button class="btn btn-primary" onclick="window.location.href='./404.html'">Select
+                            Priority</button>
                     </div>
                 </div>
 
@@ -146,7 +149,8 @@
                         <li><i class="fas fa-check"></i> API Integration Support</li>
                     </ul>
                     <div class="pricing-footer">
-                        <button class="btn btn-outline-dark" onclick="window.location.href='./404.html'">Select Enterprise</button>
+                        <button class="btn btn-outline-dark" onclick="window.location.href='./404.html'">Select
+                            Enterprise</button>
                     </div>
                 </div>
             </div>
@@ -160,7 +164,7 @@
 
 
 
-     <section class="section" id="zone-pricing">
+    <section class="section" id="zone-pricing" data-aos="fade-down">
         <div class="container">
             <div class="section-header">
                 <h5 class="subtitle">Distance Calculation</h5>
@@ -209,7 +213,7 @@
 
 
 
-     <section class="section" id="vehicle-rates" style="background-color: var(--text-dark); color: white;">
+    <section class="section" id="vehicle-rates" style="background-color: var(--text-dark); color: white;" data-aos="zoom-in">
         <div class="container">
             <div class="section-header">
                 <h5 class="subtitle" style="color: var(--primary-color);">Dedicated Transport</h5>
@@ -281,7 +285,7 @@
 
 
 
-    <section class="addons-section section" id="addons">
+    <section class="addons-section section" id="addons" data-aos="fade-up">
         <div class="container">
             <header class="section-header reveal-up">
                 <div class="subtitle-wrapper">
@@ -341,8 +345,7 @@
 
 
 
-     <!-- Footer -->
-    <footer class="footer">
+     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
                 <a href="price.html" class="logo footer-logo">
@@ -387,6 +390,23 @@
 
 
     <script src="script.js"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,
+        });
+
+        // data-aos="fade-up"
+        // fade-up, fade-down, fade-left, fade-right, zoom-in,	slide-up, flip-left	
+
+    </script>
+
+
 </body>
 
 </html>
