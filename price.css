@@ -1,17 +1,15 @@
-/* --- Pricing Hero Core --- */
-.pricing-hero {
+ .pricing-hero {
     position: relative;
-    height: 85vh; /* Professional depth for internal pages */
-    min-height: 600px;
+    height: 85vh;
+     min-height: 600px;
     display: flex;
     align-items: center;
     overflow: hidden;
     color: var(--white);
-    background-color: var(--text-dark); /* Deep navy fallback */
-}
+    background-color: var(--text-dark);
+ }
 
-/* Background & Ken Burns Animation */
-.pricing-hero-bg {
+ .pricing-hero-bg {
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -25,23 +23,26 @@
 }
 
 @keyframes kenBurnsZoom {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
 }
 
 .pricing-hero-overlay {
     position: absolute;
     inset: 0;
-    /* Deep navy gradient to make white text pop */
-    background: linear-gradient(105deg, 
-        rgba(26, 26, 46, 0.9) 0%, 
-        rgba(26, 26, 46, 0.7) 50%,
-        rgba(26, 26, 46, 0.3) 100%);
+     background: linear-gradient(105deg,
+            rgba(26, 26, 46, 0.9) 0%,
+            rgba(26, 26, 46, 0.7) 50%,
+            rgba(26, 26, 46, 0.3) 100%);
     z-index: 2;
 }
 
-/* Content Layout */
-.pricing-relative {
+ .pricing-relative {
     position: relative;
     z-index: 10;
 }
@@ -66,8 +67,7 @@
     max-width: 600px;
 }
 
-/* Hero Buttons */
-.pricing-hero-actions {
+ .pricing-hero-actions {
     display: flex;
     gap: 20px;
 }
@@ -88,8 +88,7 @@
     border-color: var(--white);
 }
 
-/* Scroll Mouse Animation */
-.scroll-down-indicator {
+ .scroll-down-indicator {
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -118,12 +117,18 @@
 }
 
 @keyframes scrollWheelDown {
-    0% { opacity: 1; transform: translate(-50%, 0); }
-    100% { opacity: 0; transform: translate(-50%, 15px); }
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 15px);
+    }
 }
 
-/* --- 768px Tablet & Mobile Media Query --- */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
     .pricing-hero {
         height: auto;
         padding: 160px 0 100px;
@@ -135,8 +140,7 @@
     }
 
     .pricing-hero-content {
-        /* Glassmorphism Shield on Mobile */
-        background: rgba(255, 255, 255, 0.04);
+         background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
         padding: 40px 24px;
@@ -182,8 +186,7 @@
 
 
 
-/* --- Pricing Section Styles --- */
-.pricing-section {
+ .pricing-section {
     padding: 100px 0;
     overflow: hidden;
 }
@@ -206,8 +209,7 @@
     flex-direction: column;
 }
 
-/* Hover & Popular States */
-.pricing-card:hover {
+ .pricing-card:hover {
     transform: translateY(-15px);
     box-shadow: 0 30px 60px rgba(26, 26, 46, 0.08);
     border-color: var(--primary-color);
@@ -225,8 +227,7 @@
     transform: scale(1.05) translateY(-10px);
 }
 
-/* Popular Badge Pill */
-.popular-badge {
+ .popular-badge {
     position: absolute;
     top: -15px;
     left: 50%;
@@ -241,8 +242,7 @@
     text-transform: uppercase;
 }
 
-/* Header & Typography */
-.plan-type {
+ .plan-type {
     display: block;
     font-size: 0.75rem;
     font-weight: 800;
@@ -270,8 +270,7 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Price Tag */
-.pricing-price {
+ .pricing-price {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 35px;
@@ -280,7 +279,9 @@
     align-items: baseline;
 }
 
-.popular .pricing-price { color: var(--white); }
+.popular .pricing-price {
+    color: var(--white);
+}
 
 .unit {
     font-size: 1rem;
@@ -289,13 +290,12 @@
     margin-left: 5px;
 }
 
-/* Features List */
-.pricing-features {
+ .pricing-features {
     list-style: none;
     padding: 0;
     margin-bottom: 40px;
-    flex-grow: 1; /* Pushes footer to bottom */
-}
+    flex-grow: 1;
+ }
 
 .pricing-features li {
     padding: 12px 0;
@@ -319,8 +319,7 @@
     opacity: 0.2;
 }
 
-/* Footer Button */
-.btn-outline-dark {
+ .btn-outline-dark {
     width: 100%;
     padding: 16px;
     border: 2px solid var(--text-dark);
@@ -336,11 +335,11 @@
     color: var(--white);
 }
 
-/* --- 768px Tablet & Mobile Media Query --- */
-@media (max-width: 1024px) {
+ @media (max-width: 1024px) {
     .pricing-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .pricing-card.popular {
         grid-column: span 2;
         transform: scale(1);
@@ -375,13 +374,13 @@
 
 
 
-/* Zone Map (Premium Alternative to Table) */
-.zone-map {
+ .zone-map {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     position: relative;
 }
+
 .zone-step {
     background: var(--white);
     border-radius: 20px;
@@ -394,46 +393,60 @@
     z-index: 2;
     overflow: hidden;
 }
+
 .zone-step::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 4px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
     background: var(--border-color);
     transition: var(--transition);
 }
+
 .zone-step:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
 }
+
 .zone-step:hover::before {
     background: var(--primary-color);
 }
+
 .zone-icon-wrapper {
-    width: 60px; height: 60px;
-    background: rgba(255,19,29,0.05);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 19, 29, 0.05);
     color: var(--primary-color);
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto 20px;
     font-size: 1.5rem;
     transition: var(--transition);
 }
+
 .zone-step:hover .zone-icon-wrapper {
     background: var(--primary-color);
     color: white;
     transform: scale(1.1) rotate(5deg);
 }
+
 .zone-step h3 {
     font-size: 1.4rem;
     margin-bottom: 4px;
 }
+
 .zone-step .zone-range {
     color: var(--text-light);
     font-size: 0.95rem;
     margin-bottom: 20px;
     display: block;
 }
+
 .zone-multiplier {
     display: inline-block;
     background: var(--bg-gray);
@@ -445,24 +458,26 @@
     margin-bottom: 12px;
     transition: var(--transition);
 }
+
 .zone-step:hover .zone-multiplier {
     background: var(--primary-color);
     color: white;
 }
+
 .zone-time {
     font-size: 0.9rem;
     color: var(--text-light);
     font-weight: 500;
 }
 
-/* Vehicle Premium Rate Cards */
-.vehicle-rates-container {
+ .vehicle-rates-container {
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 24px;
 }
+
 .vehicle-rate-card {
     background: #111;
     border-radius: 20px;
@@ -474,71 +489,84 @@
     justify-content: space-between;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     color: white;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .vehicle-rate-card::after {
     content: '';
     position: absolute;
-    background: radial-gradient(circle at right top, rgba(255,19,29,0.4) 0%, transparent 60%);
-    width: 150px; height: 150px;
-    right: -50px; top: -50px;
+    background: radial-gradient(circle at right top, rgba(255, 19, 29, 0.4) 0%, transparent 60%);
+    width: 150px;
+    height: 150px;
+    right: -50px;
+    top: -50px;
     border-radius: 50%;
     opacity: 0;
     transition: var(--transition);
     z-index: 1;
     pointer-events: none;
 }
+
 .vehicle-rate-card:hover {
     transform: translateY(-8px) scale(1.02);
-    border-color: rgba(255,19,29,0.5);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2), 0 0 20px rgba(255,19,29,0.2);
+    border-color: rgba(255, 19, 29, 0.5);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 19, 29, 0.2);
 }
+
 .vehicle-rate-card:hover::after {
     transform: scale(1.5);
     opacity: 1;
 }
+
 .vehicle-info {
     display: flex;
     align-items: center;
     gap: 20px;
     z-index: 2;
 }
+
 .vehicle-icon {
     font-size: 2rem;
     color: white;
     width: 60px;
     height: 60px;
-    background: rgba(255,19,29,0.2);
-    border: 1px solid rgba(255,19,29,0.3);
+    background: rgba(255, 19, 29, 0.2);
+    border: 1px solid rgba(255, 19, 29, 0.3);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s;
 }
+
 .vehicle-rate-card:hover .vehicle-icon {
     background: var(--primary-color);
     transform: rotate(10deg);
 }
+
 .vehicle-info h3 {
     margin-bottom: 4px;
     font-size: 1.2rem;
     color: white;
 }
+
 .vehicle-info p {
     margin: 0;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 0.95rem;
 }
+
 .vehicle-price {
     text-align: right;
     z-index: 2;
 }
+
 .vehicle-price h4 {
     font-size: 1.6rem;
     color: white;
     margin-bottom: 2px;
 }
+
 .vehicle-price span {
     color: var(--primary-color);
     font-size: 0.85rem;
@@ -546,17 +574,19 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
+
 @media (max-width: 768px) {
     .vehicle-rate-card {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
     }
+
     .vehicle-price {
         text-align: left;
         width: 100%;
         padding-top: 16px;
-        border-top: 1px solid rgba(255,255,255,0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
 
@@ -566,8 +596,7 @@
 
 
 
-/* --- Pricing Add-ons Styles --- */
-.addons-section {
+ .addons-section {
     background-color: var(--white);
     padding: 100px 0;
 }
@@ -591,8 +620,7 @@
     cursor: default;
 }
 
-/* Hover State - Glow & Slide */
-.addon-row:hover {
+ .addon-row:hover {
     background: var(--white);
     transform: translateX(10px);
     border-color: var(--primary-color);
@@ -610,7 +638,7 @@
     justify-content: center;
     font-size: 1.2rem;
     margin-right: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     transition: var(--transition);
 }
 
@@ -653,21 +681,20 @@
     text-transform: uppercase;
 }
 
-/* --- 768px Tablet & Mobile Media Query --- */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
     .addons-list {
         margin-top: 40px;
     }
 
     .addon-row {
         padding: 20px;
-        flex-wrap: wrap; /* Allow wrapping for small screens */
-        gap: 15px;
+        flex-wrap: wrap;
+         gap: 15px;
     }
 
     .addon-row:hover {
-        transform: translateY(-5px); /* Lift up instead of slide right on mobile */
-    }
+        transform: translateY(-5px);
+     }
 
     .addon-icon {
         margin-right: 0;
@@ -677,14 +704,14 @@
     }
 
     .addon-info {
-        width: calc(100% - 60px); /* Fill space next to icon */
-    }
+        width: calc(100% - 60px);
+     }
 
     .addon-price {
         width: 100%;
         text-align: left;
-        padding-left: 60px; /* Align with the text info */
-        font-size: 1.1rem;
+        padding-left: 60px;
+         font-size: 1.1rem;
         border-top: 1px solid var(--border-color);
         padding-top: 10px;
         margin-top: 5px;
