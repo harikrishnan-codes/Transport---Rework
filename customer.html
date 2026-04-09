@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,20 +16,22 @@
 
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
 
     <aside class="sidebar">
         <div class="sidebar-header">
             <a href="index.html" class="brand"><i class="fas fa-truck-fast"></i> Transport Client</a>
-            <button class="close-sidebar" onclick="document.querySelector('.sidebar').classList.remove('active')"><i class="fas fa-times"></i></button>
+            <button class="close-sidebar" onclick="document.querySelector('.sidebar').classList.remove('active')"><i
+                    class="fas fa-times"></i></button>
         </div>
-        
+
         <nav class="nav-menu">
-            <a href="#" class="nav-item active"><i class="fas fa-home"></i> Dashboard Summary</a>
-            <a href="#" class="nav-item"><i class="fas fa-box-open"></i> Booking & Quotes</a>
-            <a href="#" class="nav-item"><i class="fas fa-history"></i> Package History</a>
-            <a href="#" class="nav-item"><i class="fas fa-file-invoice"></i> Invoices & Billing</a>
-            <a href="#" class="nav-item"><i class="fas fa-cog"></i> Account Settings</a>
+            <a href="./404.html" class="nav-item active"><i class="fas fa-home"></i> Dashboard Summary</a>
+            <a href="./404.html" class="nav-item"><i class="fas fa-box-open"></i> Booking & Quotes</a>
+            <a href="./404.html" class="nav-item"><i class="fas fa-history"></i> Package History</a>
+            <a href="./404.html" class="nav-item"><i class="fas fa-file-invoice"></i> Invoices & Billing</a>
+            <a href="./404.html" class="nav-item"><i class="fas fa-cog"></i> Account Settings</a>
         </nav>
 
         <div class="user-panel">
@@ -36,28 +39,34 @@
             <div class="user-info">
                 <p id="customerNameDisplay">Client User</p>
                 <span>Logistics Partner</span>
-                <span id="customerEmailDisplay" style="display:block; text-transform:none; font-size:0.8rem; margin-top:2px;"></span>
+                <span id="customerEmailDisplay"
+                    style="display:block; text-transform:none; font-size:0.8rem; margin-top:2px;"></span>
             </div>
-            <button class="logout-btn" title="Log Out" onclick="logout()"><i class="fas fa-sign-out-alt"></i></button>
+            <button class="logout-btn" title="Log Out" onclick="window.location.href='index.html'"><i
+                    class="fas fa-sign-out-alt"></i></button>
         </div>
     </aside>
 
     <main class="main-canvas">
         <div class="top-bar">
-            <button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')"><i class="fas fa-bars"></i></button>
+            <button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')"><i
+                    class="fas fa-bars"></i></button>
             <h1 class="page-title">Customer Dashboard</h1>
             <div class="quick-actions">
-                <button class="btn"><i class="fas fa-paper-plane"></i> Book New Shipment</button>
+                <button class="btn" onclick="window.location.href='./404.html'"><i class="fas fa-paper-plane"></i> Book
+                    New Shipment</button>
             </div>
         </div>
 
         <div class="dashboard-grid">
-            
+
             <div class="left-column">
                 <div class="panel">
                     <div class="panel-header">
                         <h3>Your Recent Bookings</h3>
-                        <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">View All Docs &rarr;</a>
+                        <a href="./404.html"
+                            style="color: var(--primary-color); text-decoration: none; font-weight: 600;">View All Docs
+                            &rarr;</a>
                     </div>
                     <div class="table-responsive">
                         <table>
@@ -99,12 +108,14 @@
             </div>
 
             <div class="right-column">
-                <div class="panel track-widget">
-                    <h3>Track a Package</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem;">Enter your tracking code below to instantly locate your cargo.</p>
-                    <input type="text" placeholder="e.g. SWF-89241-XB">
-                    <button type="button">Track Package</button>
-                </div>
+                <form class="panel track-widget" action="./404.html" method="GET">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">Track a Package</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem;">Enter your tracking
+                        code below to instantly locate your cargo.</p>
+                    <input type="text" placeholder="e.g. SWF-89241-XB" required>
+                    <button type="submit">Track Package</button>
+                </form>
+
 
                 <div class="panel">
                     <h3 style="margin-bottom: 20px;">Dedicated Logistics Agent</h3>
@@ -135,7 +146,7 @@
                     document.getElementById('customerEmailDisplay').textContent = session.email;
                 }
             }
-        } catch(e) {}
+        } catch (e) { }
 
         function logout() {
             localStorage.removeItem('swiftline_session');
@@ -143,4 +154,5 @@
         }
     </script>
 </body>
+
 </html>
